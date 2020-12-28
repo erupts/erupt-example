@@ -1,4 +1,4 @@
-<p align="center"><img src="./erupt-web/src/main/resources/public/erupt.svg" height="150" alt="logo"/></p>
+<p align="center"><img src="https://www.erupt.xyz/demo/erupt.svg" height="150" alt="logo"/></p>
 <h1 align="center"> Erupt 项目演示代码 </h1>
 
 ---
@@ -11,7 +11,6 @@
 使用方法：   
 1. 前往 src/main/resources/application.yml 修改数据库连接配置
 2. 前往 src/main/java/DemoApplication 运行main方法即可
-
 
 目录说明
 ```lua
