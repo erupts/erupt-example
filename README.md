@@ -12,6 +12,11 @@
 1. 前往 src/main/resources/application.yml 修改数据库连接配置
 2. 前往 src/main/java/DemoApplication 运行main方法即可
 
+将model下的类添加到菜单：
+启动成功后，前往菜单页面，点击新增按钮：
+菜单类型：选择树或者表格
+类型值：类名
+
 目录说明
 ```lua
 erupt-example
