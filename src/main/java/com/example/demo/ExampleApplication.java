@@ -10,10 +10,10 @@ import xyz.erupt.core.annotation.EruptScan;
 @ComponentScan({"xyz.erupt", "com.example.demo"}) // ↓ xyz.erupt必须有
 @EntityScan({"xyz.erupt", "com.example.demo"})    // ↓ 如果包名com.example.demo有变化
 @EruptScan({"xyz.erupt", "com.example.demo"})     // → 要修改为变化后的包名
-public class DemoApplication {
+public class ExampleApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(DemoApplication.class, args);
+        SpringApplication.run(ExampleApplication.class, args);
     }
 
 }
