@@ -1,8 +1,7 @@
 package com.example.demo.handler;
 
-import com.example.demo.model.Components;
+import com.example.demo.model.Component;
 import org.apache.poi.ss.usermodel.Workbook;
-import org.springframework.stereotype.Component;
 import xyz.erupt.annotation.fun.DataProxy;
 
 import java.util.Collection;
@@ -12,11 +11,11 @@ import java.util.Map;
  * @author liyuepeng
  * @date 2021/1/2 21:29
  */
-@Component
-public class ComponentDataProxy implements DataProxy<Components> {
+@org.springframework.stereotype.Component
+public class ComponentDataProxy implements DataProxy<Component> {
 
     @Override
-    public void addBehavior(Components o) {
+    public void addBehavior(Component o) {
         o.setInput("China🇨🇳");
         o.setNumber1(3.1415926);
         o.setColor("#0099ff");
@@ -24,32 +23,32 @@ public class ComponentDataProxy implements DataProxy<Components> {
 
 
     @Override
-    public void beforeAdd(Components o) {
+    public void beforeAdd(Component o) {
         System.err.println("beforeAdd");
     }
 
     @Override
-    public void afterAdd(Components o) {
+    public void afterAdd(Component o) {
         System.err.println("afterAdd");
     }
 
     @Override
-    public void beforeUpdate(Components o) {
+    public void beforeUpdate(Component o) {
         System.err.println("beforeUpdate");
     }
 
     @Override
-    public void afterUpdate(Components o) {
+    public void afterUpdate(Component o) {
         System.err.println("afterUpdate");
     }
 
     @Override
-    public void beforeDelete(Components o) {
+    public void beforeDelete(Component o) {
         System.err.println("beforeDelete");
     }
 
     @Override
-    public void afterDelete(Components o) {
+    public void afterDelete(Component o) {
         System.err.println("afterDelete");
     }
 
@@ -65,7 +64,7 @@ public class ComponentDataProxy implements DataProxy<Components> {
     }
 
     @Override
-    public void editBehavior(Components o) {
+    public void editBehavior(Component o) {
         System.err.println("editBehavior");
     }
 
@@ -75,7 +74,7 @@ public class ComponentDataProxy implements DataProxy<Components> {
     }
 
     @Override
-    public void excelImport(Components o) {
+    public void excelImport(Component o) {
         System.err.println("excelImport");
     }
 

@@ -39,7 +39,7 @@ import javax.persistence.*;
                         icon = "fa fa-check-square",
                         operationHandler = OperationHandlerImpl.class),
                 @RowOperation(
-                        eruptClass = SimpleDialog.class, //提交前需要填写该类中定义的表单
+                        eruptClass = ComplexOperator.class, //提交前需要填写该类中定义的表单
                         operationHandler = OperationHandlerImpl.class,
                         mode = RowOperation.Mode.BUTTON,
                         tip = "不依赖任何数据即可执行",
@@ -54,12 +54,12 @@ import javax.persistence.*;
 public class Complex extends BaseModel {
 
     @EruptField(
-            views = @View(title = "通过SQL获取下拉列表"),
+            views = @View(title = "动态下拉列表"),
             edit = @Edit(
                     search = @Search,
                     title = "通过SQL获取下拉列表",
                     type = EditType.CHOICE,
-                    desc = "下拉值为动态获取",
+                    desc = "动态下拉列表",
                     choiceType = @ChoiceType(
                             fetchHandler = SqlChoiceFetchHandler.class,
                             fetchHandlerParams = "select id,name from e_upms_menu"
@@ -84,7 +84,7 @@ public class Complex extends BaseModel {
             edit = @Edit(title = "多对一树", search = @Search, type = EditType.REFERENCE_TREE,
                     referenceTreeType = @ReferenceTreeType(id = "id", label = "name", pid = "parent.id"))
     )
-    private DemoTree tree;
+    private TreeView tree;
 
     @ManyToOne
     @JoinColumn

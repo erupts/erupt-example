@@ -9,7 +9,7 @@ import java.util.Date;
 
 
 @Erupt(name = "Operator Dialog")
-public class SimpleDialog extends BaseModel {
+public class ComplexOperator extends BaseModel {
 
     @EruptField(
             edit = @Edit(title = "文本参数", notNull = true)

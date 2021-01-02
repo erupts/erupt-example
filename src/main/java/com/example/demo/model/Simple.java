@@ -19,7 +19,7 @@ import java.util.Date;
 @Table(name = "demo_simple")
 @Entity
 @Erupt(name = "简单示例")
-public class DemoSimple extends BaseModel {
+public class Simple extends BaseModel {
 
     @EruptField(
             views = @View(title = "文本"),
@@ -34,12 +34,6 @@ public class DemoSimple extends BaseModel {
     private Float number;
 
     @EruptField(
-            views = @View(title = "滑动条"),
-            edit = @Edit(title = "滑动条", type = EditType.SLIDER, search = @Search)
-    )
-    private Integer slide;
-
-    @EruptField(
             views = @View(title = "布尔"),
             edit = @Edit(title = "布尔")
     )
@@ -50,5 +44,12 @@ public class DemoSimple extends BaseModel {
             edit = @Edit(title = "时间", search = @Search(vague = true))
     )
     private Date date;
+
+
+    @EruptField(
+            views = @View(title = "滑动条"),
+            edit = @Edit(title = "滑动条", type = EditType.SLIDER, search = @Search(vague = true))
+    )
+    private Integer slide;
 
 }

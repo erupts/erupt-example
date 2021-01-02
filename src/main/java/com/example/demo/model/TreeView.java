@@ -22,10 +22,10 @@ import javax.persistence.Table;
 @Table(name = "demo_tree")
 @Erupt(
         name = "树示例",
-        orderBy = "DemoTree.sort",
+        orderBy = "TreeView.sort",
         tree = @Tree(id = "id", label = "name", pid = "parent.id")
 )
-public class DemoTree extends BaseModel {
+public class TreeView extends BaseModel {
 
     @EruptField(
             views = @View(title = "名称"),
@@ -47,7 +47,7 @@ public class DemoTree extends BaseModel {
                     referenceTreeType = @ReferenceTreeType(pid = "parent.id")
             )
     )
-    private DemoTree parent;
+    private TreeView parent;
 
 
 }

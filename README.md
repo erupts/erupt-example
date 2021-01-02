@@ -19,10 +19,10 @@
   
 | 菜单名称 |  菜单类型  | 类型值（类名） | 描述 |
 |  ---- |  ----  | ----  | ----  |
-| 入门示例 | 表格 | DemoSimple |  |
+| 入门示例 | 表格 | Simple |  |
 | 文章管理 | 表格 | Article |  |
-| 树示例 | 树 | DemoTree |  |
-| 组件示例 | 表格 | Components | 各类组件与事件代理使用方法 |
+| 树示例 | 树 | TreeView |  |
+| 组件示例 | 表格 | Component | 各类组件与事件代理使用方法 |
 | 复杂示例 | 表格 | Complex | 动态下拉列表与定义按钮等功能 |
 
 
@@ -40,12 +40,18 @@ erupt-example
 ├── src.main
      ├── java -- 代码包
            └── com.example.demo
-                ├── DemoApplication   -- 入口类
+                ├── ExampleApplication   -- 入口类
+                ├── handler
+                     ├──  AutoCompleteHandlerImpl  -- 自动完成示例
+                     ├──  ComponentDataProxy       -- 事件代理代码示例
+                     └──  OperationHandlerImpl     -- 操作按钮处理类
                 └── model
-                     ├──  DemoHyper   -- 复杂的示例
-                     ├──  DemoSimple  -- 简单的示例
-                     ├──  DemoTree    -- 树视图示例
-                     └──  OperationHandlerImpl -- 按钮操作方法实现
+                     ├──  Article  -- 文章示例
+                     ├──  Complex  -- 复杂示例
+                     ├──  ComplexOperator  -- 复杂示例按钮表单
+                     ├──  Componen -- 组件示例
+                     ├──  Simple   -- 基本示例
+                     └──  TreeView -- 树视图
      └── resources -- 配置包
            ├── application.yml -- 后台配置
            └── public

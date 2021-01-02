@@ -26,7 +26,7 @@ import java.util.Date;
 )
 @Table(name = "demo_component")
 @Entity
-public class Components extends HyperModel {
+public class Component extends HyperModel {
 
     @EruptField(
             views = @View(title = "文本"),
@@ -83,7 +83,7 @@ public class Components extends HyperModel {
             edit = @Edit(title = "多对一树", search = @Search, type = EditType.REFERENCE_TREE,
                     referenceTreeType = @ReferenceTreeType(id = "id", label = "name", pid = "parent.id"))
     )
-    private DemoTree tree;
+    private TreeView tree;
 
     @EruptField(
             views = @View(title = "标签选择"),
