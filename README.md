@@ -34,16 +34,19 @@
 
 
 ### 常见问题
-如果图片上传失败请前往 application.yml 修改 erupt.uploadPath 配置   
-地图组件无法使用请前往 app.js 修改 eruptSiteConfig.amapKey 的值
++ 如果图片上传失败请前往 application.yml 修改 erupt.uploadPath 配置
++ 地图组件无法使用请前往 app.js 修改 eruptSiteConfig.amapKey 的值
++ 继承HyperModel的作用，可帮助管理，创建时间，修改时间，修改人，更新人字段
 
 ### 目录说明
 ```lua
 erupt-example
-├── src.main
-     ├── java -- 代码包
-           └── com.example.demo
+├── src
+     ├── main.java -- 源码
+           └── com.example.demo -- 包名
                 ├── ExampleApplication   -- 入口类
+                ├── dao
+                     └──  ArticleRepository  -- 使用对文章对象的增删改查封装，使用方式与Mybatis-Plus大同小异，具体调用详见 ExampleApplicationTests
                 ├── handler
                      ├──  AutoCompleteHandlerImpl  -- 自动完成示例
                      ├──  ComponentDataProxy       -- 事件代理代码示例
@@ -55,6 +58,9 @@ erupt-example
                      ├──  Componen -- 组件示例
                      ├──  Simple   -- 基本示例
                      └──  TreeView -- 树视图
+     ├── test.java -- 测试包
+           └── com.example.demo -- 包名
+                └──  ExampleApplicationTests  -- 包含调用 ArticleRepository 演示代码，直接点击运行单个方法即可
      └── resources -- 配置包
            ├── application.yml -- 后台配置
            └── public

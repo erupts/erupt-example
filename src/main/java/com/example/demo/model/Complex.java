@@ -17,6 +17,7 @@ import xyz.erupt.upms.handler.SqlChoiceFetchHandler;
 import xyz.erupt.upms.handler.ViaMenuCtrl;
 
 import javax.persistence.*;
+import java.util.Set;
 
 /**
  * @author liyuepeng
@@ -105,17 +106,22 @@ public class Complex extends BaseModel {
     )
     private String code;
 
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "complex_id")
     @EruptField(
-            views = @View(title = "附件上传", type = ViewType.DOWNLOAD),
-            edit = @Edit(title = "附件上传", type = EditType.ATTACHMENT,
-                    attachmentType = @AttachmentType, placeHolder = "请上传附件")
+            edit = @Edit(title = "一对多新增", type = EditType.TAB_TABLE_ADD)
     )
-    private String attachment;
+    private Set<ComplexTab> complexTab;
 
+    @ManyToMany
+    @JoinTable(
+            name = "e_complex_article",
+            joinColumns = @JoinColumn(name = "complex_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(name = "article_id", referencedColumnName = "id"))
     @EruptField(
-            views = @View(title = "地图"),
-            edit = @Edit(title = "地图", type = EditType.MAP)
+            edit = @Edit(title = "关联多篇文章", type = EditType.TAB_TABLE_REFER,
+                    referenceTableType = @ReferenceTableType(label = "title"))
     )
-    private String map;
+    private Set<Article> articleTab;
 
 }

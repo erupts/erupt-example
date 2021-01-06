@@ -8,7 +8,7 @@ import xyz.erupt.annotation.sub_field.Edit;
 import xyz.erupt.annotation.sub_field.EditType;
 import xyz.erupt.annotation.sub_field.View;
 import xyz.erupt.annotation.sub_field.sub_edit.*;
-import xyz.erupt.upms.model.base.HyperModel;
+import xyz.erupt.jpa.model.BaseModel;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
@@ -26,7 +26,7 @@ import java.util.Date;
 )
 @Table(name = "demo_component")
 @Entity
-public class Component extends HyperModel {
+public class Component extends BaseModel {
 
     @EruptField(
             views = @View(title = "文本"),
