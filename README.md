@@ -24,6 +24,9 @@
 | 树示例 | 树 | TreeView |  |
 | 组件示例 | 表格 | Component | 各类组件与事件代理使用方法 |
 | 复杂示例 | 表格 | Complex | 动态下拉列表与定义按钮等功能 |
+| 多行操作 | 功能按钮 | ComplexBtn | 控制 Complex 多行操作 按钮的权限，最好隐藏 |
+| 链接 | 链接 | https://www.erupt.xyz |  |
+| 新页面 | 新页签 | https://github.com/erupts/erupt |  |
 
 
 **配置项说明**
