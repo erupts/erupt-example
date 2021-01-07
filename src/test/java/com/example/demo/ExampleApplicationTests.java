@@ -33,7 +33,7 @@ class ExampleApplicationTests {
     //删除
     @Test
     void deleteArticle() {
-        articleRepository.deleteById(1L);
+//        articleRepository.deleteById(1L);
     }
 
     //新增 or 更新
