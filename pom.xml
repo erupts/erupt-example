@@ -54,6 +54,12 @@
             <artifactId>erupt-web</artifactId>
             <version>${erupt.version}</version>
         </dependency>
+        <!--任务管理模块-->
+        <dependency>
+            <groupId>xyz.erupt</groupId>
+            <artifactId>erupt-job</artifactId>
+            <version>${erupt.version}</version>
+        </dependency>
     </dependencies>
 
     <build>
