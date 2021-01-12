@@ -23,3 +23,11 @@ spring:
     database: mysql
   profiles:
     active: dev
+  mail:
+    username: xxxx@qq.com
+    password: xxxxxxx
+    host: smtp.qq.com
+    properties:
+      mail.smtp.ssl.auth: true
+      mail.smtp.ssl.enable: true
+      mail.smtp.ssl.required: true
