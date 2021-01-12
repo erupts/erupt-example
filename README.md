@@ -12,6 +12,8 @@
 1. 前往 src/main/resources/application.yml 修改数据库连接配置
 2. 前往 src/main/java/DemoApplication 运行main方法即可
 
+默认用户名密码： erupt / erupt
+
 
 ### 将model下的类添加到菜单：
 
