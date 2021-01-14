@@ -6,6 +6,7 @@ import xyz.erupt.annotation.sub_field.Edit;
 import xyz.erupt.annotation.sub_field.EditType;
 import xyz.erupt.annotation.sub_field.View;
 import xyz.erupt.annotation.sub_field.sub_edit.Search;
+import xyz.erupt.annotation.sub_field.sub_edit.SliderType;
 import xyz.erupt.jpa.model.BaseModel;
 
 import javax.persistence.Entity;
@@ -45,10 +46,10 @@ public class Simple extends BaseModel {
     )
     private Date date;
 
-
     @EruptField(
             views = @View(title = "滑动条"),
-            edit = @Edit(title = "滑动条", type = EditType.SLIDER, search = @Search(vague = true))
+            edit = @Edit(title = "滑动条", type = EditType.SLIDER, search = @Search,
+                    sliderType = @SliderType(max = 100, markPoints = {30, 60}))
     )
     private Integer slide;
 
