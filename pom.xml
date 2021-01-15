@@ -16,7 +16,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <erupt.version>1.5.5</erupt.version>
+        <erupt.version>1.5.7</erupt.version>
     </properties>
 
     <dependencies>
