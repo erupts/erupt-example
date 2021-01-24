@@ -1,5 +1,5 @@
 
-<p align="center"><img src="./erupt-web/src/main/resources/public/erupt.svg" height="150" alt="logo"/></p>
+<p align="center"><img src="https://www.erupt.xyz/demo/erupt.svg" height="150" alt="logo"/></p>
 <h1 align="center"> Erupt Framework &nbsp; 🚀 &nbsp; 框架演示代码 </h1>
 <h3 align="center">零前端代码，几行 Java 注解，搞定后台管理系统</h3>
 <h3 align="center"><a href="https://erupt.xyz" target="_blank">https://www.erupt.xyz</a></h3>
