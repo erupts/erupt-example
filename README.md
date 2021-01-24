@@ -27,6 +27,7 @@
 | 组件示例 | 表格 | Component | 各类组件与事件代理使用方法 |
 | 复杂示例 | 表格 | Complex | 动态下拉列表与定义按钮等功能 |
 | 多行操作 | 功能按钮 | ComplexBtn | 控制 Complex 多行操作 按钮的权限，最好隐藏 |
+| 自定义页面 | 模板 | erupt.html | 自定义页面 |
 | 链接 | 链接 | https://www.erupt.xyz |  |
 | 新页面 | 新页签 | https://github.com/erupts/erupt |  |
 
@@ -65,6 +66,8 @@ erupt-example
                 └──  ExampleApplicationTests  -- 包含调用 ArticleRepository 演示代码，直接点击运行单个方法即可
      └── resources -- 配置包
            ├── application.yml -- 后台配置
+           ├── tpl
+                ├── erupt.html -- 自定义页面
            └── public
                 ├── app.css    -- 前端样式
                 ├── app.js     -- 前端配置

@@ -21,6 +21,7 @@ public class ExampleApplication {
         SpringApplication.run(ExampleApplication.class, args);
         System.setProperty("java.awt.headless", "false");
         Desktop.getDesktop().browse(new URI("http://localhost:8080"));
+        System.err.println("详细使用方法，请阅读：README.md");
     }
 
 }
