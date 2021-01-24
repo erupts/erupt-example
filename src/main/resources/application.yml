@@ -1,3 +1,6 @@
+erupt-app:
+  # 登录失败几次，需要验证码
+  verifyCodeCount: 2
 erupt:
   # 是否开启csrf防御
   csrfInspect: true

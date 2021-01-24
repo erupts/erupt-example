@@ -14,4 +14,6 @@ window.eruptSiteConfig = {
     logoPath: "erupt.svg",
     //logo文字
     logoText: "erupt",
+    //是否开启路由复用
+    routerReuse: true,
 };
