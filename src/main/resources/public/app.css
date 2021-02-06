@@ -5,3 +5,7 @@ layout-passport > .container{
     background-size: cover !important;
     background-image:url(./login-img.png) !important;
 }
+
+layout-passport .title {
+    font-family: Courier New, Menlo, Monaco, Consolas, monospace !important;
+}
