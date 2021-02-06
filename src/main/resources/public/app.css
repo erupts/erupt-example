@@ -1,1 +1,7 @@
-/*自定义样式*/
+/* 例：修改登录页背景图 */
+layout-passport > .container{
+    background-position:center !important;
+    background-repeat:repeat !important;
+    background-size: cover !important;
+    background-image:url(./login-img.png) !important;
+}
