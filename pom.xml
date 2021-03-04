@@ -18,7 +18,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <erupt.version>1.6.5</erupt.version>
+        <erupt.version>1.6.7</erupt.version>
     </properties>
 
     <dependencies>
@@ -72,6 +72,12 @@
         <dependency>
             <groupId>xyz.erupt</groupId>
             <artifactId>erupt-generator</artifactId>
+            <version>${erupt.version}</version>
+        </dependency>
+        <!--服务监控模块-->
+        <dependency>
+            <groupId>xyz.erupt</groupId>
+            <artifactId>erupt-monitor</artifactId>
             <version>${erupt.version}</version>
         </dependency>
 
