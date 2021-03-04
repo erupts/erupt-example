@@ -19,6 +19,7 @@ import java.net.URISyntaxException;
 @EruptScan({"xyz.erupt", "com.example.demo"})     // → 要修改为变化后的包名
 public class ExampleApplication extends SpringBootServletInitializer {
 
+    //详细使用方法详见项目内 README.md 文件说明
     public static void main(String[] args) throws URISyntaxException, IOException {
         SpringApplication.run(ExampleApplication.class, args);
         System.setProperty("java.awt.headless", "false");
