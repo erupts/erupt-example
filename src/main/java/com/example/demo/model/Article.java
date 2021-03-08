@@ -43,9 +43,9 @@ public class Article extends HyperModel {
 
     @EruptField(
             views = @View(title = "置顶"),
-            edit = @Edit(title = "置顶", notNull = true, boolType = @BoolType(defaultValue = false), search = @Search)
+            edit = @Edit(title = "置顶", notNull = true, search = @Search)
     )
-    private Boolean top;
+    private Boolean top = false;
 
     @EruptField(
             views = @View(title = "发布状态"),
