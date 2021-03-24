@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <base href="${base}/">
+    <meta charset="UTF-8" />
+    <title>amis demo</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport"/>
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
+    <link href="amis/sdk.css" rel="stylesheet" />
+    <!-- 从 1.1.0 开始 sdk.css 将不支持 IE 11，如果要支持 IE11 请引用这个 css，并把前面那个删了 -->
+    <!--<link rel="stylesheet" href="amis/sdk-ie11.css" /> -->
+    <!-- 不过 amis 开发团队几乎没测试过 IE 11 下的效果，所以可能有细节功能用不了，如果发现请报 issue -->
+
+    <!--    <link href="amis/cxd.css" rel="stylesheet" />-->
+    <!--    <link href="amis/dark.css" rel="stylesheet" />-->
+    <!--    <link href="amis/antd.css" rel="stylesheet" />-->
+
+    <style>
+        html, body, .app-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="app-wrapper" id="root"></div>
+<script src="amis/sdk.js"></script>
+<script type="text/javascript">
+    (function () {
+        let amis = amisRequire('amis/embed');
+        // 通过替换下面这个配置来生成不同页面
+        let amisJSON = {
+            "type": "page",
+            "body": [
+                {
+                    "type": "form",
+                    "api": "https://3xsw4ap8wah59.cfc-execute.bj.baidubce.com/api/amis-mock/mock2/form/saveForm",
+                    "controls": [
+                        {
+                            "label": "组合穿梭器",
+                            "type": "tabs-transfer",
+                            "name": "a",
+                            "sortable": true,
+                            "selectMode": "tree",
+                            "searchable": true,
+                            "options": [
+                                {
+                                    "label": "成员",
+                                    "selectMode": "tree",
+                                    "children": [
+                                        {
+                                            "label": "法师",
+                                            "children": [
+                                                {
+                                                    "label": "诸葛亮",
+                                                    "value": "zhugeliang"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "label": "战士",
+                                            "children": [
+                                                {
+                                                    "label": "曹操",
+                                                    "value": "caocao"
+                                                },
+                                                {
+                                                    "label": "钟无艳",
+                                                    "value": "zhongwuyan"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "label": "打野",
+                                            "children": [
+                                                {
+                                                    "label": "李白",
+                                                    "value": "libai"
+                                                },
+                                                {
+                                                    "label": "韩信",
+                                                    "value": "hanxin"
+                                                },
+                                                {
+                                                    "label": "云中君",
+                                                    "value": "yunzhongjun"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "label": "用户",
+                                    "selectMode": "chained",
+                                    "children": [
+                                        {
+                                            "label": "法师",
+                                            "children": [
+                                                {
+                                                    "label": "诸葛亮",
+                                                    "value": "zhugeliang2"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "label": "战士",
+                                            "children": [
+                                                {
+                                                    "label": "曹操",
+                                                    "value": "caocao2"
+                                                },
+                                                {
+                                                    "label": "钟无艳",
+                                                    "value": "zhongwuyan2"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "label": "打野",
+                                            "children": [
+                                                {
+                                                    "label": "李白",
+                                                    "value": "libai2"
+                                                },
+                                                {
+                                                    "label": "韩信",
+                                                    "value": "hanxin2"
+                                                },
+                                                {
+                                                    "label": "云中君",
+                                                    "value": "yunzhongjun2"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        };
+        let amisScoped = amis.embed('#root', amisJSON);
+    })();
+</script>
+</body>
+</html>

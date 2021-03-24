@@ -52,7 +52,7 @@
 | 自定义页面 | 模板 | erupt.html | 自定义页面 |
 | 链接 | 链接 | https://www.erupt.xyz |  |
 | 新页面 | 新页签 | https://github.com/erupts/erupt |  |
-
+| amis | 模板 | amis.html | 基于百度amis开发的自定义页面 |
 
 **配置项说明**
 > 编码：确保唯一即可，建议是字母
@@ -90,6 +90,7 @@ erupt-example
            ├── application.yml -- 后台配置
            ├── tpl
                 ├── erupt.html -- 自定义页面
+                ├── amis.html -- 基于百度amis开发的页面
            └── public
                 ├── app.css    -- 前端样式
                 ├── app.js     -- 前端配置
