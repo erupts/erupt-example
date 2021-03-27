@@ -23,7 +23,7 @@ import javax.persistence.Table;
 @Erupt(
         name = "树示例",
         orderBy = "TreeView.sort",
-        tree = @Tree(id = "id", label = "name", pid = "parent.id")
+        tree = @Tree(pid = "parent.id")
 )
 public class TreeView extends BaseModel {
 

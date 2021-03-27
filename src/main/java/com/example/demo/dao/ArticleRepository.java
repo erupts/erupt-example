@@ -2,6 +2,8 @@ package com.example.demo.dao;
 
 import com.example.demo.model.Article;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
@@ -16,5 +18,14 @@ public interface ArticleRepository extends JpaRepository<Article, Long> {
 
     //方法名称必须要遵循驼峰式命名规则，findBy（关键字）+属性名称（首字母大写）+查询条件（首字母大写）
     List<Article> findByTitle(String title); //根据标题查找文章
+
+    List<Article> findByTitleLike(String title);
+
+    @Query("from Article where top = true")
+    List<Article> queryByHql(String name);
+
+    @Query("update Article set title=? where id=?")
+    @Modifying  //需要执行一个更新操作
+    void updateTitleById(String title, Integer id);
 
 }

@@ -62,7 +62,7 @@
             <artifactId>erupt-job</artifactId>
             <version>${erupt.version}</version>
         </dependency>
-        <!--自定义模板页面模块-->
+        <!--自定义页面模块-->
         <dependency>
             <groupId>xyz.erupt</groupId>
             <artifactId>erupt-tpl</artifactId>
@@ -80,23 +80,23 @@
             <artifactId>erupt-monitor</artifactId>
             <version>${erupt.version}</version>
         </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-tomcat</artifactId>
-            <scope>provided</scope>
-        </dependency>
-
+        <!--element-ui-->
         <dependency>
             <groupId>xyz.erupt</groupId>
             <artifactId>erupt-tpl-ui.element-ui</artifactId>
             <version>${erupt.version}</version>
         </dependency>
-
+        <!--百度 amis-->
         <dependency>
             <groupId>xyz.erupt</groupId>
             <artifactId>erupt-tpl-ui.amis</artifactId>
             <version>${erupt.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
