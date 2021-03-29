@@ -24,8 +24,4 @@ public interface ArticleRepository extends JpaRepository<Article, Long> {
     @Query("from Article where top = true")
     List<Article> queryByHql(String name);
 
-    @Modifying //需要执行一个更新操作
-    @Query("update Article set title=:title where id=:id")
-    void updateTitleById(String title, Integer id);
-
 }
