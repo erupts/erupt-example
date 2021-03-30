@@ -53,6 +53,7 @@
 | 链接 | 链接 | https://www.erupt.xyz |  |
 | 新页面 | 新页签 | https://github.com/erupts/erupt |  |
 | amis | 模板 | amis.html | 基于百度amis开发的自定义页面 |
+| Velocity | 模板 | Velocity.vm | 使用Velocity服务端渲染的页面 |
 
 **配置项说明**
 > 编码：确保唯一即可，建议是字母

@@ -1,0 +1,37 @@
+<style>
+    span {
+        display: inline-block;
+        width: 100px;
+        background: #0f0;
+        color: #fff;
+        transition: all 1s;
+        border: 1px solid #000;
+        animation: flow 1s;
+    }
+
+    @keyframes flow {
+        0% {
+            opacity: 0;
+            transform: translateX(20px) translateY(20px);
+        }
+    }
+
+    span:nth-child(3n+1) {
+        background: #09f;
+    }
+
+    span:nth-child(2n) {
+        background: #f00;
+    }
+</style>
+#include("/tpl/header.vm")
+#foreach($i in $num)
+<p style="text-align: center">
+    #foreach($j in $num)
+        #if($i >= $j)
+            #set($multi = $i * $j)
+            <span style="animation-delay: ${multi}0ms">$i * $j = $multi</span>
+        #end
+    #end
+</p>
+#end
