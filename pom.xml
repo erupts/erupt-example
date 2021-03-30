@@ -93,6 +93,14 @@
             <version>${erupt.version}</version>
         </dependency>
 
+        <!--magic-script-->
+        <dependency>
+            <groupId>xyz.erupt</groupId>
+            <artifactId>erupt-magic-api</artifactId>
+            <version>${erupt.version}</version>
+        </dependency>
+
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-tomcat</artifactId>
