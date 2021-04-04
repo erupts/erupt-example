@@ -15,6 +15,7 @@ import xyz.erupt.jpa.model.BaseModel;
 import xyz.erupt.upms.handler.DictChoiceFetchHandler;
 import xyz.erupt.upms.handler.SqlChoiceFetchHandler;
 import xyz.erupt.upms.handler.ViaMenuCtrl;
+import xyz.erupt.upms.handler.ViaMenuValueCtrl;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -33,7 +34,7 @@ import java.util.Set;
                         code = "SINGLE"),
                 @RowOperation(title = "多行操作",
                         show = @ExprBool(
-                                exprHandler = ViaMenuCtrl.class,
+                                exprHandler = ViaMenuValueCtrl.class,
                                 params = "ComplexBtn"  //将ComplexBtn添加到菜单可控制该按钮的显示隐藏
                         ),
                         code = "MULTI",
