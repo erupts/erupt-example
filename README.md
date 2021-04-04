@@ -33,6 +33,7 @@
 ### 使用方法：   
 1. 前往 src/main/resources/application.yml 修改数据库连接配置
 2. 前往 src/main/java/DemoApplication 运行main方法即可
+3. src/main/resources/application.yml 其他配置
 
 默认用户名密码： erupt / erupt
 
@@ -48,12 +49,24 @@
 | 树示例 | 树 | TreeView |  |
 | 组件示例 | 表格 | Component | 各类组件与事件代理使用方法 |
 | 复杂示例 | 表格 | Complex | 动态下拉列表与定义按钮等功能 |
-| 多行操作 | 功能按钮 | ComplexBtn | 控制 Complex '多行操作'的按钮权限，状态选隐藏 |
-| 自定义页面 | 模板 | erupt.html | 自定义页面 |
+| 按钮权限 | | | 控制 Complex '多行操作'的按钮权限，状态选隐藏，编码值为：ComplexBtn |
+|  ---- |  ----  | ----  | ----  |
 | 链接 | 链接 | https://www.erupt.xyz |  |
 | 新页面 | 新页签 | https://github.com/erupts/erupt |  |
+| 自定义页面 | 模板 | erupt.html | 自定义页面 |
 | amis | 模板 | amis.html | 基于百度amis开发的自定义页面 |
-| Velocity | 模板 | Velocity.vm | 使用Velocity服务端渲染的页面 |
+| velocity | 模板 | velocity.vm |  Velocity服务端渲染的页面 |
+| freemarker | 模板 | freemarker.ftl | freemarker服务端渲染的页面 |
+| thymeleaf | 模板 | thymeleaf.html | thymeleaf服务端渲染的页面（请提前导入thymeleaf jar） |
+|  ---- |  ----  | ----  | ----  |
+| 博客管理 | 表格 | Blog |  |
+| 博客类型 | 树 | | BlogCategory |  |
+| 博客标签 | 树 | BlogTag |  |
+| 友情链接 | 表格 | | FriendlyLink |  |
+|  ---- |  ----  | ----  | ----  |
+| 商品管理 | 表格 | Goods |  |
+| 商品分类| 树 | GoodsCategory |  |
+| 优惠券管理| 表格 | Coupon |  |
 
 **配置项说明**
 > 编码：确保唯一即可，建议是字母
@@ -71,6 +84,7 @@ erupt-example
      ├── main.java -- 源码
            └── com.example.demo -- 包名
                 ├── ExampleApplication   -- 入口类
+                ├── action -- 自定义页面数据绑定与路由转换器
                 ├── dao
                      └──  ArticleRepository  -- 使用对文章对象的增删改查封装，使用方式与Mybatis-Plus大同小异，具体调用详见 ExampleApplicationTests
                 ├── handler
@@ -78,6 +92,8 @@ erupt-example
                      ├──  ComponentDataProxy       -- 事件代理代码示例
                      └──  OperationHandlerImpl     -- 操作按钮处理类
                 └── model
+                     ├──  blog  -- 博客示例包
+                     ├──  mall  -- 商城示例包
                      ├──  Article  -- 文章示例
                      ├──  Complex  -- 复杂示例
                      ├──  ComplexOperator  -- 复杂示例按钮表单

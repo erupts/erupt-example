@@ -24,7 +24,7 @@
         background: #f00;
     }
 </style>
-#include("/tpl/header.vm")
+#include("/tpl/header.html")
 #foreach($i in $num)
 <p style="text-align: center">
     #foreach($j in $num)

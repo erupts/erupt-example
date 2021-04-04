@@ -15,6 +15,14 @@ erupt:
   # 是否记录操作日志，默认true，该功能开启后可在【系统管理 → 操作日志】中查看操作日志
   security.recordOperateLog: true
   jacksonHttpMessageConvertersPackages: org.ssssssss
+
+
+magic-api:
+  web: /magic/web
+  # 接口配置文件存放路径
+  resource.location: D:/erupt/magic-script
+
+
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/erupt2?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
@@ -35,6 +43,8 @@ spring:
       mail.smtp.ssl.auth: true
       mail.smtp.ssl.enable: true
       mail.smtp.ssl.required: true
+
+
 server:
   # 启用 gzip 压缩
   compression:
@@ -44,7 +54,3 @@ server:
     includeException: true
     includeStacktrace: ALWAYS
     includeMessage: ALWAYS
-magic-api:
-  web: /magic/web
-  # 接口配置文件存放路径
-  resource.location: D:/erupt/magic-script
