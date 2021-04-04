@@ -54,15 +54,15 @@
 | 链接 | 链接 | https://www.erupt.xyz |  |
 | 新页面 | 新页签 | https://github.com/erupts/erupt |  |
 | 自定义页面 | 模板 | erupt.html | 自定义页面 |
-| amis | 模板 | amis.html | 基于百度amis开发的自定义页面 |
+| amis | 模板 | amis.html | 基于百度 amis 开发的自定义页面 |
 | velocity | 模板 | velocity.vm |  Velocity服务端渲染的页面 |
-| freemarker | 模板 | freemarker.ftl | freemarker服务端渲染的页面 |
-| thymeleaf | 模板 | thymeleaf.html | thymeleaf服务端渲染的页面（请提前导入thymeleaf jar） |
+| freemarker | 模板 | freemarker.ftl | Freemarker服务端渲染的页面 |
+| thymeleaf | 模板 | thymeleaf.html | Thymeleaf服务端渲染的页面（请提前导入thymeleaf jar） |
 |  ---- |  ----  | ----  | ----  |
 | 博客管理 | 表格 | Blog |  |
-| 博客类型 | 树 | | BlogCategory |  |
+| 博客类型 | 树 | BlogCategory |  |
 | 博客标签 | 树 | BlogTag |  |
-| 友情链接 | 表格 | | FriendlyLink |  |
+| 友情链接 | 表格 | FriendlyLink |  |
 |  ---- |  ----  | ----  | ----  |
 | 商品管理 | 表格 | Goods |  |
 | 商品分类| 树 | GoodsCategory |  |
