@@ -1,6 +1,7 @@
 package com.example.demo.model;
 
 import com.example.demo.handler.OperationHandlerImpl;
+import com.example.demo.handler.OperationHandlerImpl2;
 import xyz.erupt.annotation.Erupt;
 import xyz.erupt.annotation.EruptField;
 import xyz.erupt.annotation.expr.ExprBool;
@@ -28,16 +29,14 @@ import java.util.Set;
         name = "复杂示例",
         rowOperation = {
                 @RowOperation(
-                        operationHandler = OperationHandlerImpl.class,
+                        operationHandler = OperationHandlerImpl2.class,
                         mode = RowOperation.Mode.SINGLE,
-                        title = "单行操作",
-                        code = "SINGLE"),
+                        title = "单行操作"),
                 @RowOperation(title = "多行操作",
                         show = @ExprBool(
                                 exprHandler = ViaMenuValueCtrl.class,
                                 params = "ComplexBtn"  //将ComplexBtn添加到菜单可控制该按钮的显示隐藏
                         ),
-                        code = "MULTI",
                         icon = "fa fa-check-square",
                         operationHandler = OperationHandlerImpl.class),
                 @RowOperation(
@@ -46,7 +45,6 @@ import java.util.Set;
                         mode = RowOperation.Mode.BUTTON,
                         tip = "不依赖任何数据即可执行",
                         title = "按钮操作",
-                        code = "BUTTON",
                         icon = "fa fa-google-wallet")
         },
         linkTree = @LinkTree(field = "tree")
