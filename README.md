@@ -108,6 +108,7 @@ erupt-example
            ├── tpl
                 ├── erupt.html -- 自定义页面
                 ├── amis.html -- 基于百度amis开发的页面
+                └── xxxx.html -- 使用模板引擎渲染
            └── public
                 ├── app.css    -- 前端样式
                 ├── app.js     -- 前端配置
