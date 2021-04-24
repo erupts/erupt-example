@@ -32,7 +32,7 @@
 
 ### 使用方法：   
 1. 前往 src/main/resources/application.yml 修改数据库连接配置
-2. 前往 src/main/java/DemoApplication 运行main方法即可
+2. 前往 src/main/java/DemoApplication 运行main方法即可（无需sql文件，表结构自动创建）
 3. src/main/resources/application.yml 其他配置
 
 默认用户名密码： erupt / erupt
