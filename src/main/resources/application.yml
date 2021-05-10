@@ -16,7 +16,6 @@ erupt:
   security.recordOperateLog: true
   jacksonHttpMessageConvertersPackages: org.ssssssss
 
-
 magic-api:
   web: /magic/web
   # 接口配置文件存放路径
@@ -43,6 +42,10 @@ spring:
       mail.smtp.ssl.auth: true
       mail.smtp.ssl.enable: true
       mail.smtp.ssl.required: true
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
 
 
 server:
