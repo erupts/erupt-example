@@ -50,6 +50,7 @@
 | 组件示例 | 表格 | Component | 各类组件与事件代理使用方法 |
 | 复杂示例 | 表格 | Complex | 动态下拉列表与定义按钮等功能 |
 | 按钮权限 | 按钮 | ComplexBtn | 控制 Complex '多行操作'的按钮权限 |
+| **服务层逻辑扩展** | 表格 | CURDExtension | @DataProxy（扩展CURD） |
 |  ---- |  ----  | ----  | ----  |
 | 链接 | 链接 | https://www.erupt.xyz |  |
 | 新页面 | 新页签 | https://github.com/erupts/erupt |  |
