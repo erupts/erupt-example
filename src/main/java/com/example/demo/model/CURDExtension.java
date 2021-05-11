@@ -20,8 +20,9 @@ import java.util.Map;
  * see <a href="https://www.yuque.com/erupts/erupt/nicqg3">link</a>
  */
 @Erupt(
-        name = "DataProxy 简单实用",
-        desc = "服务层逻辑扩展 @DataProxy （扩展CURD）",
+        name = "服务层逻辑扩展 @DataProxy （扩展CURD）",
+        desc = "提供增、删、改、查、导入、导出、数据初始化等事件触发逻辑接口，相当于传统开发中的 service 层\n" +
+                "可以实现如：缓存写入，数据校验，RPC调用，动态赋值等功能 ！）",
         dataProxy = CURDExtension.class
 )
 @Entity
