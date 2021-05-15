@@ -53,7 +53,7 @@ public class ComponentDataProxy implements DataProxy<Component> {
     }
 
     @Override
-    public String beforeFetch() {
+    public String beforeFetch(Class clazz) {
         System.err.println("beforeFetch");
         return null;
     }
