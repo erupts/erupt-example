@@ -4,7 +4,7 @@ erupt-app:
 erupt:
   # 是否开启csrf防御
   csrfInspect: true
-  # 是否开启redis方式存储session，默认false，开启后需在配置文件中添加redis配置
+  # 是否开启redis方式存储session，默认false，开启后需在配置文件中添加redis配置（同 spring boot）
   redisSession: false
   # 附件上传存储路径, 默认路径为：/opt/erupt-attachment
   uploadPath: D:/erupt/attachment
@@ -14,13 +14,11 @@ erupt:
   upms.expireTimeByLogin: 60
   # 是否记录操作日志，默认true，该功能开启后可在【系统管理 → 操作日志】中查看操作日志
   security.recordOperateLog: true
-  jacksonHttpMessageConvertersPackages: org.ssssssss
 
 magic-api:
   web: /magic/web
   # 接口配置文件存放路径
   resource.location: D:/erupt/magic-script
-
 
 spring:
   datasource:
