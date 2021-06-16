@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="zh">
-<body>
 <style>
     * {
         padding: 0;
@@ -18,5 +15,3 @@
         </#list>
     </table>
 </div>
-</body>
-</html>
