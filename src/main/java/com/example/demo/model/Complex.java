@@ -2,11 +2,14 @@ package com.example.demo.model;
 
 import com.example.demo.handler.OperationHandlerImpl;
 import com.example.demo.handler.OperationHandlerImpl2;
+import jdk.nashorn.internal.objects.annotations.Getter;
+import jdk.nashorn.internal.objects.annotations.Setter;
 import xyz.erupt.annotation.Erupt;
 import xyz.erupt.annotation.EruptField;
 import xyz.erupt.annotation.expr.ExprBool;
 import xyz.erupt.annotation.sub_erupt.LinkTree;
 import xyz.erupt.annotation.sub_erupt.RowOperation;
+import xyz.erupt.annotation.sub_erupt.Tpl;
 import xyz.erupt.annotation.sub_field.Edit;
 import xyz.erupt.annotation.sub_field.EditType;
 import xyz.erupt.annotation.sub_field.View;
@@ -45,7 +48,13 @@ import java.util.Set;
                         mode = RowOperation.Mode.BUTTON,
                         tip = "不依赖任何数据即可执行",
                         title = "按钮操作",
-                        icon = "fa fa-google-wallet")
+                        icon = "fa fa-google-wallet"),
+                @RowOperation(type = RowOperation.Type.TPL,
+                        mode = RowOperation.Mode.MULTI,
+                        tpl = @Tpl(path = "/tpl/operation.ftl", engine = Tpl.Engine.FreeMarker),
+                        title = "自定义模板",
+                        icon = "fa fa-pagelines"
+                )
         },
         linkTree = @LinkTree(field = "tree")
 )
@@ -123,4 +132,15 @@ public class Complex extends BaseModel {
     )
     private Set<Article> articleTab;
 
+    public String getChoice() {
+        return choice;
+    }
+
+    public Article getArticle() {
+        return article;
+    }
+
+    public String getCode() {
+        return code;
+    }
 }
