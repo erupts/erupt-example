@@ -2,8 +2,6 @@ package com.example.demo.model;
 
 import com.example.demo.handler.OperationHandlerImpl;
 import com.example.demo.handler.OperationHandlerImpl2;
-import jdk.nashorn.internal.objects.annotations.Getter;
-import jdk.nashorn.internal.objects.annotations.Setter;
 import xyz.erupt.annotation.Erupt;
 import xyz.erupt.annotation.EruptField;
 import xyz.erupt.annotation.expr.ExprBool;
@@ -18,7 +16,6 @@ import xyz.erupt.annotation.sub_field.sub_edit.*;
 import xyz.erupt.jpa.model.BaseModel;
 import xyz.erupt.upms.handler.DictChoiceFetchHandler;
 import xyz.erupt.upms.handler.SqlChoiceFetchHandler;
-import xyz.erupt.upms.handler.ViaMenuCtrl;
 import xyz.erupt.upms.handler.ViaMenuValueCtrl;
 
 import javax.persistence.*;
