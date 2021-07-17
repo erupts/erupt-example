@@ -19,6 +19,7 @@ magic-api:
   web: /magic/web
   # 接口配置文件存放路径
   resource.location: D:/erupt/magic-script
+  show-url: false
 
 spring:
   datasource:
