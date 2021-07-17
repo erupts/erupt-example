@@ -20,8 +20,10 @@ public class ExampleApplication extends SpringBootServletInitializer {
     //详细使用方法详见项目内 README.md 文件说明
     public static void main(String[] args) throws URISyntaxException, IOException {
         SpringApplication.run(ExampleApplication.class, args);
-        System.setProperty("java.awt.headless", "false");
-        Desktop.getDesktop().browse(new URI("http://localhost:8080"));
+        if (Desktop.isDesktopSupported()) {
+            System.setProperty("java.awt.headless", "false");
+            Desktop.getDesktop().browse(new URI("http://localhost:8080"));
+        }
         System.err.println("详细使用方法，请阅读：README.md");
     }
 
