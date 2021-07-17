@@ -9,9 +9,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 import xyz.erupt.core.annotation.EruptScan;
 
 import java.awt.*;
-import java.io.IOException;
 import java.net.URI;
-import java.net.URISyntaxException;
 
 @SpringBootApplication
 @EntityScan
@@ -19,8 +17,8 @@ import java.net.URISyntaxException;
 public class ExampleApplication extends SpringBootServletInitializer {
 
     //详细使用方法详见项目内 README.md 文件说明
-    public static void main(String[] args) throws URISyntaxException, IOException {
-        ConfigurableApplicationContext context = SpringApplication.run(ExampleApplication.class, args);
+    public static void main(String[] args) {
+        SpringApplication.run(ExampleApplication.class, args);
         try {
             System.setProperty("java.awt.headless", "false");
             Desktop.getDesktop().browse(new URI("http://localhost:8080"));
