@@ -3,8 +3,10 @@ package com.example.demo.handler;
 import com.example.demo.model.Component;
 import org.apache.poi.ss.usermodel.Workbook;
 import xyz.erupt.annotation.fun.DataProxy;
+import xyz.erupt.annotation.query.Condition;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -53,7 +55,7 @@ public class ComponentDataProxy implements DataProxy<Component> {
     }
 
     @Override
-    public String beforeFetch(Class clazz) {
+    public String beforeFetch(List<Condition> conditions) {
         System.err.println("beforeFetch");
         return null;
     }

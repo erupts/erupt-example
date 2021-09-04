@@ -22,7 +22,7 @@ public class OperationHandlerImpl implements OperationHandler<Complex, ComplexOp
     private HttpServletRequest request; //展示自动注入功能
 
     @Override
-    public void exec(List<Complex> data, ComplexOperator complexOperator, String[] param) {
+    public String exec(List<Complex> data, ComplexOperator complexOperator, String[] param) {
         throw new EruptApiErrorTip(new EruptApiModel(EruptApiModel.Status.WARNING,
                 "自定义报错提示：" + request.getServletPath(), EruptApiModel.PromptWay.NOTIFY));
     }

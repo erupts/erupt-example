@@ -13,7 +13,7 @@ import java.util.List;
 
 /**
  * @author liyuepeng
- * @date 2018-10-10.
+ * date 2018-10-10.
  */
 @Component
 public class OperationHandlerImpl2 implements OperationHandler<Complex, ComplexOperator> {
@@ -22,9 +22,10 @@ public class OperationHandlerImpl2 implements OperationHandler<Complex, ComplexO
     private HttpServletRequest request; //展示自动注入功能
 
     @Override
-    public void exec(List<Complex> data, ComplexOperator complexOperator, String[] param) {
+    public String exec(List<Complex> data, ComplexOperator complexOperator, String[] param) {
         System.out.println(OperationHandlerImpl2.class.getSimpleName());
         System.out.println(data);
+        return null;
     }
 
 }
