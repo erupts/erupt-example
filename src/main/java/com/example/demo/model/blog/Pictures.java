@@ -10,7 +10,7 @@ import xyz.erupt.annotation.sub_field.EditType;
 import xyz.erupt.annotation.sub_field.View;
 import xyz.erupt.annotation.sub_field.ViewType;
 import xyz.erupt.annotation.sub_field.sub_edit.Search;
-import xyz.erupt.core.config.EruptProp;
+import xyz.erupt.core.prop.EruptProp;
 import xyz.erupt.upms.model.base.HyperModel;
 
 import javax.annotation.Resource;

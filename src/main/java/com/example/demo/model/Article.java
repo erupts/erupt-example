@@ -45,7 +45,7 @@ public class Article extends HyperModel {
             views = @View(title = "置顶"),
             edit = @Edit(title = "置顶", notNull = true, search = @Search)
     )
-    private Boolean top = false;
+    private Boolean topUp = false;
 
     @EruptField(
             views = @View(title = "发布状态"),
@@ -94,11 +94,11 @@ public class Article extends HyperModel {
     }
 
     public Boolean getTop() {
-        return top;
+        return topUp;
     }
 
     public void setTop(Boolean top) {
-        this.top = top;
+        this.topUp = top;
     }
 
     public Boolean getPublish() {
@@ -138,7 +138,7 @@ public class Article extends HyperModel {
         return "Article{" +
                 "pic='" + pic + '\'' +
                 ", title='" + title + '\'' +
-                ", top=" + top +
+                ", topUp=" + topUp +
                 ", publish=" + publish +
                 ", content='" + content + '\'' +
                 ", content2='" + content2 + '\'' +
