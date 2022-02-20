@@ -1,3 +1,7 @@
+layout-header {
+    background: #444 !important;
+}
+
 /* 例：修改登录页样式 */
 layout-passport > .container {
     background-position: center !important;
