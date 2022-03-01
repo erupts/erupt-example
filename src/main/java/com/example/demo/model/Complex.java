@@ -87,6 +87,9 @@ public class Complex extends BaseModel {
 
     @ManyToOne
     @EruptField(
+            views = {
+                    @View(title = "多对一树", column = "name"),
+            },
             edit = @Edit(title = "多对一树", search = @Search, type = EditType.REFERENCE_TREE,
                     referenceTreeType = @ReferenceTreeType(id = "id", label = "name", pid = "parent.id"))
     )
