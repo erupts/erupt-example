@@ -22,7 +22,7 @@ import javax.persistence.Table;
  */
 @Erupt(name = "文章发布",
         power = @Power(importable = true, export = true),
-        orderBy = "top desc"
+        orderBy = "Article.topUp desc"
 )
 @Entity
 @Table(name = "demo_article")
