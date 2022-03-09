@@ -18,7 +18,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <erupt.version>1.10.3</erupt.version>
+        <erupt.version>1.10.4</erupt.version>
     </properties>
 
 
@@ -93,7 +93,7 @@
             <artifactId>erupt-tpl-ui.amis</artifactId>
             <version>${erupt.version}</version>
         </dependency>
-        <!--magic-script-->
+        <!--magic-api-->
         <dependency>
             <groupId>xyz.erupt</groupId>
             <artifactId>erupt-magic-api</artifactId>
