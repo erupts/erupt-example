@@ -57,6 +57,9 @@
             <artifactId>erupt-web</artifactId>
             <version>${erupt.version}</version>
         </dependency>
+
+        <!-- ****** 以下模块不需要可以去掉 ****** -->
+
         <!--任务管理模块-->
         <dependency>
             <groupId>xyz.erupt</groupId>

@@ -21,7 +21,7 @@ public interface ArticleRepository extends JpaRepository<Article, Long> {
 
     List<Article> findByTitleLike(String title);
 
-    @Query("from Article where top = true")
+    @Query("from Article where topUp = true")
     List<Article> queryByHql(String name);
 
 }

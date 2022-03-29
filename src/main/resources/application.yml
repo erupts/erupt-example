@@ -46,7 +46,6 @@ spring:
       max-file-size: 100MB
       max-request-size: 100MB
 
-
 server:
   # 启用 gzip 压缩
   compression:

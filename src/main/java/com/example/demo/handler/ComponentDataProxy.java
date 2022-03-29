@@ -23,7 +23,6 @@ public class ComponentDataProxy implements DataProxy<Component> {
         o.setColor("#0099ff");
     }
 
-
     @Override
     public void beforeAdd(Component o) {
         System.err.println("beforeAdd");

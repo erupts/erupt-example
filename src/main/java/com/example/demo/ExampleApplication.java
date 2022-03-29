@@ -21,8 +21,7 @@ public class ExampleApplication extends SpringBootServletInitializer {
         try {
             System.setProperty("java.awt.headless", "false");
             Desktop.getDesktop().browse(new URI("http://localhost:8080"));
-        } catch (Exception e) {
-            System.setProperty("java.awt.headless", "true");
+        } catch (Exception ignore) {
         }
         System.err.println("详细使用方法，请阅读：README.md");
     }

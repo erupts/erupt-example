@@ -8,6 +8,7 @@ layout-passport > .container {
     background-repeat: repeat !important;
     background-size: cover !important;
     background-color: #fff !important;
+    /*background-image: url(./login-img.jpg) !important;*/
     background-image: url(https://www.erupt.xyz/demo/login-bg.svg) !important;
 }
 

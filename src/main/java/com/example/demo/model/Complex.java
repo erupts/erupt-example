@@ -1,7 +1,6 @@
 package com.example.demo.model;
 
 import com.example.demo.handler.OperationHandlerImpl;
-import com.example.demo.handler.OperationHandlerImpl2;
 import xyz.erupt.annotation.Erupt;
 import xyz.erupt.annotation.EruptField;
 import xyz.erupt.annotation.expr.ExprBool;
@@ -29,7 +28,7 @@ import java.util.Set;
         name = "复杂示例",
         rowOperation = {
                 @RowOperation(
-                        operationHandler = OperationHandlerImpl2.class,
+                        operationHandler = OperationHandlerImpl.class,
                         mode = RowOperation.Mode.SINGLE,
                         title = "单行操作"),
                 @RowOperation(title = "多行操作",
