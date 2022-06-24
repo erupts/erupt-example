@@ -5,6 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.core.env.ConfigurableEnvironment;
 import xyz.erupt.core.annotation.EruptScan;
 
 import java.awt.*;
@@ -17,10 +19,14 @@ public class ExampleApplication extends SpringBootServletInitializer {
 
     //详细使用方法详见项目内 README.md 文件说明
     public static void main(String[] args) {
-        SpringApplication.run(ExampleApplication.class, args);
+//        SpringApplication.run(ExampleApplication.class, args);
+        ConfigurableApplicationContext run = SpringApplication.run(ExampleApplication.class, args);
+        ConfigurableEnvironment environment = run.getEnvironment();
+        String port = environment.getProperty("local.server.port");
         try {
             System.setProperty("java.awt.headless", "false");
-            Desktop.getDesktop().browse(new URI("http://localhost:8080"));
+//            Desktop.getDesktop().browse(new URI("http://localhost:8080"));
+            Desktop.getDesktop().browse(new URI("http://localhost:"+port));
         } catch (Exception e) {
             System.setProperty("java.awt.headless", "true");
         }
