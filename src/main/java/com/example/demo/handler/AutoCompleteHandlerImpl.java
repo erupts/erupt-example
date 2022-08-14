@@ -5,6 +5,7 @@ import xyz.erupt.annotation.fun.AutoCompleteHandler;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author liyuepeng
@@ -14,7 +15,7 @@ import java.util.List;
 public class AutoCompleteHandlerImpl implements AutoCompleteHandler {
 
     @Override
-    public List<Object> completeHandler(String val, String[] param) {
+    public List<Object> completeHandler(Map<String, Object> formData, String val, String[] param) {
         List<Object> list = new ArrayList<>();
         for (int i = 0; i < 26; i++) {
             list.add(val + " -> " + (char) (i + 64));
