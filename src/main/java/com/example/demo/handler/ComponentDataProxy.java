@@ -70,7 +70,8 @@ public class ComponentDataProxy implements DataProxy<Component> {
     }
 
     @Override
-    public void excelExport(Workbook wb) {
+    public void excelExport(Object obj) {
+        Workbook wb = (Workbook) obj;
         System.err.println("excelExport");
     }
 
