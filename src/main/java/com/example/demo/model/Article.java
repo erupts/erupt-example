@@ -9,10 +9,10 @@ import xyz.erupt.annotation.sub_field.View;
 import xyz.erupt.annotation.sub_field.ViewType;
 import xyz.erupt.annotation.sub_field.sub_edit.AttachmentType;
 import xyz.erupt.annotation.sub_field.sub_edit.BoolType;
-import xyz.erupt.annotation.sub_field.sub_edit.HtmlEditorType;
 import xyz.erupt.annotation.sub_field.sub_edit.Search;
 import xyz.erupt.upms.model.base.HyperModel;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Lob;
 import javax.persistence.Table;
@@ -60,16 +60,7 @@ public class Article extends HyperModel {
     )
     private String content;
 
-    @Lob
-    @EruptField(
-            views = @View(title = "内容(CKEditor)", type = ViewType.HTML, export = false),
-            edit = @Edit(title = "内容(CKEditor)", type = EditType.HTML_EDITOR,
-                    htmlEditorType = @HtmlEditorType(HtmlEditorType.Type.CKEDITOR))
-    )
-    private String content2;
-
-
-    @Lob
+    @Column(length = 5000)
     @EruptField(
             views = @View(title = "备注"),
             edit = @Edit(title = "备注", type = EditType.TEXTAREA)
@@ -117,14 +108,6 @@ public class Article extends HyperModel {
         this.content = content;
     }
 
-    public String getContent2() {
-        return content2;
-    }
-
-    public void setContent2(String content2) {
-        this.content2 = content2;
-    }
-
     public String getRemark() {
         return remark;
     }
@@ -141,7 +124,6 @@ public class Article extends HyperModel {
                 ", topUp=" + topUp +
                 ", publish=" + publish +
                 ", content='" + content + '\'' +
-                ", content2='" + content2 + '\'' +
                 ", remark='" + remark + '\'' +
                 '}';
     }
