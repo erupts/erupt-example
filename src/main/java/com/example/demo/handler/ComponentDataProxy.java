@@ -76,7 +76,7 @@ public class ComponentDataProxy implements DataProxy<Component> {
     }
 
     @Override
-    public void excelImport(Component o) {
+    public void excelImport(Object o) {
         System.err.println("excelImport");
     }
 
