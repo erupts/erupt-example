@@ -15,6 +15,7 @@ import xyz.erupt.annotation.sub_field.sub_edit.*;
 import xyz.erupt.jpa.model.BaseModel;
 import xyz.erupt.toolkit.handler.SqlChoiceFetchHandler;
 import xyz.erupt.upms.handler.DictChoiceFetchHandler;
+import xyz.erupt.upms.handler.DictCodeChoiceFetchHandler;
 import xyz.erupt.upms.handler.ViaMenuValueCtrl;
 
 import javax.persistence.*;
@@ -83,6 +84,18 @@ public class Complex extends BaseModel {
                     ))
     )
     private Long fromDict;
+
+    @EruptField(
+            views = @View(title = "字典值（存code）"),
+            edit = @Edit(
+                    search = @Search,
+                    title = "字典值", type = EditType.CHOICE, desc = "字典值(存储字典表code)",
+                    choiceType = @ChoiceType(
+                            fetchHandler = DictCodeChoiceFetchHandler.class,
+                            fetchHandlerParams = "system" //字典编码，通过字典编码获取字典项列表
+                    ))
+    )
+    private String fromDictCode;
 
     @ManyToOne
     @EruptField(
