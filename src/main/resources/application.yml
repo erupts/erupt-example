@@ -1,6 +1,8 @@
 erupt-app:
   # 登录失败几次，需要验证码
   verifyCodeCount: 2
+  # 是否开启水印
+  water-mark: false
 erupt:
   # 是否开启csrf防御
   csrfInspect: true
@@ -14,6 +16,7 @@ erupt:
   upms.expireTimeByLogin: 60
   # 是否记录操作日志，默认true，该功能开启后可在【系统管理 → 操作日志】中查看操作日志
   security.recordOperateLog: true
+
 
 magic-api:
   web: /magic/web
