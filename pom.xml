@@ -40,16 +40,10 @@
         </dependency>
 
 
-        <!--用户权限管理-->
+        <!--核心管理模块-->
         <dependency>
             <groupId>xyz.erupt</groupId>
-            <artifactId>erupt-upms</artifactId>
-            <version>${erupt.version}</version>
-        </dependency>
-        <!--接口数据安全-->
-        <dependency>
-            <groupId>xyz.erupt</groupId>
-            <artifactId>erupt-security</artifactId>
+            <artifactId>erupt-admin</artifactId>
             <version>${erupt.version}</version>
         </dependency>
         <!--后台WEB界面-->
@@ -60,7 +54,12 @@
         </dependency>
 
         <!-- ****** 以下模块不需要可以去掉 ****** -->
-
+        <!--云节点，服务端端-->
+        <dependency>
+            <groupId>xyz.erupt</groupId>
+            <artifactId>erupt-cloud-server</artifactId>
+            <version>${erupt.version}</version>
+        </dependency>
         <!--任务管理模块-->
         <dependency>
             <groupId>xyz.erupt</groupId>
