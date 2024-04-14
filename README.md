@@ -50,12 +50,11 @@
 | 组件示例 | 表格 | Component | 各类组件与事件代理使用方法 |
 | 复杂示例 | 表格 | Complex | 动态下拉列表与定义按钮等功能 |
 | 按钮权限 | 按钮 | ComplexBtn | 控制 Complex '多行操作'的按钮权限 |
-| **服务层逻辑扩展** | 表格 | CURDExtension | @DataProxy（扩展CURD） |
+| **服务层逻辑扩展** | 表格 | CurdDemo | @DataProxy（扩展CURD） |
 |  ---- |  ----  | ----  | ----  |
 | 链接 | 链接 | https://www.erupt.xyz |  |
 | 新页面 | 新页签 | https://github.com/erupts/erupt |  |
 | 自定义页面 | 模板 | erupt.html | 自定义页面 |
-| amis | 模板 | amis.html | 基于百度 amis 开发的自定义页面 |
 | velocity | 模板 | velocity.vm |  Velocity服务端渲染的页面 |
 | freemarker | 模板 | freemarker.ftl | Freemarker服务端渲染的页面 |
 | thymeleaf | 模板 | thymeleaf.html | Thymeleaf服务端渲染的页面（请提前导入thymeleaf jar） |
@@ -86,8 +85,6 @@ erupt-example
            └── com.example.demo -- 包名
                 ├── ExampleApplication   -- 入口类
                 ├── action -- 自定义页面数据绑定与路由转换器
-                ├── dao
-                     └──  ArticleRepository  -- 使用对文章对象的增删改查封装，使用方式与Mybatis-Plus大同小异，具体调用详见 ExampleApplicationTests
                 ├── handler
                      ├──  AutoCompleteHandlerImpl  -- 自动完成示例
                      ├──  ComponentDataProxy       -- 事件代理代码示例
@@ -95,11 +92,11 @@ erupt-example
                 └── model
                      ├──  blog  -- 博客示例包
                      ├──  mall  -- 商城示例包
-                     ├──  Article  -- 文章示例
-                     ├──  Complex  -- 复杂示例
-                     ├──  ComplexOperator  -- 复杂示例按钮表单
-                     ├──  Componen -- 组件示例
-                     ├──  Simple   -- 基本示例
+                     ├──  Article    -- 文章示例
+                     ├──  Complex    -- 复杂示例包
+                     ├──  Component  -- 组件示例
+                     ├──  Simple     -- 基本示例
+                     ├──  CurdDemo   -- 自定义 service 层示例
                      └──  TreeView -- 树视图
      ├── test.java -- 测试包
            └── com.example.demo -- 包名
@@ -108,11 +105,11 @@ erupt-example
            ├── application.yml -- 后台配置
            ├── tpl
                 ├── erupt.html -- 自定义页面
-                ├── amis.html -- 基于百度amis开发的页面
                 └── xxxx.html -- 使用模板引擎渲染
            └── public
-                ├── app.css    -- 前端样式
-                ├── app.js     -- 前端配置
-                └── home.html  -- 首页样式
+                ├── app.css     -- 前端样式
+                ├── app.js      -- 前端配置
+                ├── favicon.ico -- 网站图标
+                └── home.html   -- 首页样式
 └── pom.xml -- 依赖配置
 ```

@@ -1,7 +1,7 @@
 package com.example.demo.handler;
 
-import com.example.demo.model.Complex;
-import com.example.demo.model.ComplexOperator;
+import com.example.demo.model.complex.Complex;
+import com.example.demo.model.complex.ComplexOperator;
 import org.springframework.stereotype.Component;
 import xyz.erupt.annotation.fun.OperationHandler;
 import xyz.erupt.core.exception.EruptApiErrorTip;

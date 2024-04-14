@@ -18,7 +18,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <erupt.version>1.12.8</erupt.version>
+        <erupt.version>1.12.11</erupt.version>
     </properties>
 
 
@@ -54,7 +54,7 @@
         </dependency>
 
         <!-- ****** 以下模块不需要可以去掉 ****** -->
-        <!--云节点，服务端端-->
+        <!--erupt-cloud 云节点分布式控制模块-->
         <dependency>
             <groupId>xyz.erupt</groupId>
             <artifactId>erupt-cloud-server</artifactId>
@@ -64,12 +64,6 @@
         <dependency>
             <groupId>xyz.erupt</groupId>
             <artifactId>erupt-job</artifactId>
-            <version>${erupt.version}</version>
-        </dependency>
-        <!--自定义页面模块-->
-        <dependency>
-            <groupId>xyz.erupt</groupId>
-            <artifactId>erupt-tpl</artifactId>
             <version>${erupt.version}</version>
         </dependency>
         <!--代码生成器模块-->
@@ -84,22 +78,22 @@
             <artifactId>erupt-monitor</artifactId>
             <version>${erupt.version}</version>
         </dependency>
+        <!--在线接口开发-->
+        <dependency>
+            <groupId>xyz.erupt</groupId>
+            <artifactId>erupt-magic-api</artifactId>
+            <version>${erupt.version}</version>
+        </dependency>
+        <!--自定义页面模块-->
+        <dependency>
+            <groupId>xyz.erupt</groupId>
+            <artifactId>erupt-tpl</artifactId>
+            <version>${erupt.version}</version>
+        </dependency>
         <!--element-ui-->
         <dependency>
             <groupId>xyz.erupt</groupId>
             <artifactId>erupt-tpl-ui.element-ui</artifactId>
-            <version>${erupt.version}</version>
-        </dependency>
-        <!--百度 amis-->
-        <dependency>
-            <groupId>xyz.erupt</groupId>
-            <artifactId>erupt-tpl-ui.amis</artifactId>
-            <version>${erupt.version}</version>
-        </dependency>
-        <!--magic-api-->
-        <dependency>
-            <groupId>xyz.erupt</groupId>
-            <artifactId>erupt-magic-api</artifactId>
             <version>${erupt.version}</version>
         </dependency>
         <!--velocity-->

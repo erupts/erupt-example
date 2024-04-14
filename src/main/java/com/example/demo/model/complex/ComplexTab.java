@@ -1,4 +1,4 @@
-package com.example.demo.model;
+package com.example.demo.model.complex;
 
 import xyz.erupt.annotation.Erupt;
 import xyz.erupt.annotation.EruptField;

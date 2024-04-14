@@ -1,6 +1,8 @@
-package com.example.demo.model;
+package com.example.demo.model.complex;
 
 import com.example.demo.handler.OperationHandlerImpl;
+import com.example.demo.model.Article;
+import com.example.demo.model.TreeView;
 import xyz.erupt.annotation.Erupt;
 import xyz.erupt.annotation.EruptField;
 import xyz.erupt.annotation.expr.ExprBool;
@@ -31,6 +33,7 @@ import java.util.Set;
                 @RowOperation(
                         operationHandler = OperationHandlerImpl.class,
                         mode = RowOperation.Mode.SINGLE,
+                        callHint = "确定要执行吗？",
                         title = "单行操作"),
                 @RowOperation(title = "多行操作",
                         show = @ExprBool(

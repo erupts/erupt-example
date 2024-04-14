@@ -1,8 +1,6 @@
 package com.example.demo.controller;
 
-import com.example.demo.dao.ArticleRepository;
 import com.example.demo.model.Article;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import xyz.erupt.jpa.dao.EruptDao;
@@ -13,19 +11,16 @@ import java.util.List;
 @RestController
 public class TestController {
 
-    @Autowired
-    private ArticleRepository articleRepository;
-
     @Resource
     private EruptDao eruptDao;
 
     //获取文章列表
-    @RequestMapping("/test")
+    @RequestMapping("/list")
     public List<Article> testArticle() {
-        // Erupt jdbc方式调用
-        return eruptDao.queryEntityList(Article.class);
-        // JPA jdbc方式调用
-        //  return articleRepository.findAll();
+        // Erupt jdbc方式查询
+        return eruptDao.lambdaQuery(Article.class)
+                .eq(Article::getTop, false)
+                .limit(10).list();
     }
 
 }

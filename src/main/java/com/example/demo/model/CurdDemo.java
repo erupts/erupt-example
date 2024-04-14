@@ -23,11 +23,11 @@ import java.util.Map;
         name = "服务层逻辑扩展 @DataProxy （扩展CURD）",
         desc = "提供增、删、改、查、导入、导出、数据初始化等事件触发逻辑接口，相当于传统开发中的 service 层\n" +
                 "可以实现如：缓存写入，数据校验，RPC调用，动态赋值等功能 ！）",
-        dataProxy = CURDExtension.class
+        dataProxy = CurdDemo.class
 )
 @Entity
 @Table(name = "demo_curd_extension")
-public class CURDExtension extends BaseModel implements DataProxy<CURDExtension> {
+public class CurdDemo extends BaseModel implements DataProxy<CurdDemo> {
 
     @EruptField(
             views = @View(title = "名称"),
@@ -44,36 +44,36 @@ public class CURDExtension extends BaseModel implements DataProxy<CURDExtension>
     }
 
     @Override
-    public void beforeAdd(CURDExtension curdExtension) {
+    public void beforeAdd(CurdDemo curdDemo) {
         //字段校验
-        if ("张三".equals(curdExtension.getName())) {
+        if ("张三".equals(curdDemo.getName())) {
             throw new EruptApiErrorTip("名称禁止为张三！");
         }
     }
 
     @Override
-    public void afterAdd(CURDExtension curdExtension) {
+    public void afterAdd(CurdDemo curdDemo) {
         //TODO 添加完成后处理逻辑
     }
 
     @Override
-    public void beforeUpdate(CURDExtension curdExtension) {
+    public void beforeUpdate(CurdDemo curdDemo) {
         //动态写数据
-        curdExtension.setName(curdExtension.getName() + "xxx");
+        curdDemo.setName(curdDemo.getName() + "xxx");
     }
 
     @Override
-    public void afterUpdate(CURDExtension curdExtension) {
+    public void afterUpdate(CurdDemo curdDemo) {
         //TODO 修改完成后处理逻辑
     }
 
     @Override
-    public void beforeDelete(CURDExtension curdExtension) {
+    public void beforeDelete(CurdDemo curdDemo) {
         //TODO 删除前事件处理逻辑
     }
 
     @Override
-    public void afterDelete(CURDExtension curdExtension) {
+    public void afterDelete(CurdDemo curdDemo) {
         //TODO 删除后事件处理逻辑
     }
 
@@ -83,12 +83,12 @@ public class CURDExtension extends BaseModel implements DataProxy<CURDExtension>
     }
 
     @Override
-    public void addBehavior(CURDExtension curdExtension) {
+    public void addBehavior(CurdDemo curdDemo) {
         //TODO 数据初始化逻辑
     }
 
     @Override
-    public void editBehavior(CURDExtension curdExtension) {
+    public void editBehavior(CurdDemo curdDemo) {
         //TODO 编辑时数据处理逻辑
     }
 }
