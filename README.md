@@ -1,4 +1,3 @@
-
 <p align="center"><img src="https://www.erupt.xyz/demo/erupt.svg" height="150" alt="logo"/></p>
 <h1 align="center"> Erupt Framework &nbsp; 🚀 &nbsp; 框架演示代码 </h1>
 <h3 align="center">零前端代码，几行 Java 注解，搞定后台管理系统</h3>
@@ -30,54 +29,55 @@
     QQ交流群：<a href="https://jq.qq.com/?_wv=1027&k=MCd4plZ0">821389129 🔥</a>
 </p>
 
-### 使用方法：   
+### 使用方法：
+
 1. 前往 src/main/resources/application.yml 修改数据库连接配置
 2. 前往 src/main/java/DemoApplication 运行main方法即可（无需sql文件，表结构自动创建）
 3. src/main/resources/application.yml 其他配置
 
 默认用户名密码： erupt / erupt
 
-
 ### 将model下的类添加到菜单：
 
 启动成功后，前往系统管理 → 菜单维护 → 新增，将已定义好的演示类添加到菜单中，填写数据如下：
-  
-| 菜单名称 |  菜单类型  | 类型值（类名） | 描述 |
-|  ---- |  ----  | ----  | ----  |
-| 入门示例 | 表格 | Simple |  |
-| 文章管理 | 表格 | Article |  |
-| 树示例 | 树 | TreeView |  |
-| 组件示例 | 表格 | Component | 各类组件与事件代理使用方法 |
-| 复杂示例 | 表格 | Complex | 动态下拉列表与定义按钮等功能 |
-| 按钮权限 | 按钮 | ComplexBtn | 控制 Complex '多行操作'的按钮权限 |
-| **服务层逻辑扩展** | 表格 | CurdDemo | @DataProxy（扩展CURD） |
-|  ---- |  ----  | ----  | ----  |
-| 链接 | 链接 | https://www.erupt.xyz |  |
-| 新页面 | 新页签 | https://github.com/erupts/erupt |  |
-| 自定义页面 | 模板 | erupt.html | 自定义页面 |
-| velocity | 模板 | velocity.vm |  Velocity服务端渲染的页面 |
-| freemarker | 模板 | freemarker.ftl | Freemarker服务端渲染的页面 |
-| thymeleaf | 模板 | thymeleaf.html | Thymeleaf服务端渲染的页面（请提前导入thymeleaf jar） |
-|  ---- |  ----  | ----  | ----  |
-| 博客管理 | 表格 | Blog |  |
-| 博客类型 | 树 | BlogCategory |  |
-| 博客标签 | 树 | BlogTag |  |
-| 友情链接 | 表格 | FriendlyLink |  |
-|  ---- |  ----  | ----  | ----  |
-| 商品管理 | 表格 | Goods |  |
-| 商品分类| 树 | GoodsCategory |  |
-| 优惠券管理| 表格 | Coupon |  |
+
+| 菜单名称        | 菜单类型 | 类型值（类名）                         | 描述                                    |
+|-------------|------|---------------------------------|---------------------------------------|
+| 入门示例        | 表格   | Simple                          |                                       |
+| 文章管理        | 表格   | Article                         |                                       |
+| 树示例         | 树    | TreeView                        |                                       |
+| 组件示例        | 表格   | Component                       | 各类组件与事件代理使用方法                         |
+| 复杂示例 🌟       | 表格   | Complex                         | 动态下拉列表与定义按钮等功能(内含多个高级功能，建议仔细研究)       |
+| 按钮权限        | 按钮   | ComplexBtn                      | 控制 Complex '多行操作'的按钮权限                |
+| **服务层逻辑扩展** | 表格   | CurdDemo                        | @DataProxy（扩展CURD）                    |
+| ----        | ---- | ----                            | ----                                  |
+| 链接          | 链接   | https://www.erupt.xyz           |                                       |
+| 新页面         | 新页签  | https://github.com/erupts/erupt |                                       |
+| 自定义页面       | 模板   | erupt.html                      | 自定义页面                                 |
+| velocity    | 模板   | velocity.vm                     | Velocity服务端渲染的页面                      |
+| freemarker  | 模板   | freemarker.ftl                  | Freemarker服务端渲染的页面                    |
+| thymeleaf   | 模板   | thymeleaf.html                  | Thymeleaf服务端渲染的页面（请提前导入thymeleaf jar） |
+| ----        | ---- | ----                            | ----                                  |
+| 博客管理        | 表格   | Blog                            |                                       |
+| 博客类型        | 树    | BlogCategory                    |                                       |
+| 博客标签        | 树    | BlogTag                         |                                       |
+| 友情链接        | 表格   | FriendlyLink                    |                                       |
+| ----        | ---- | ----                            | ----                                  |
+| 商品管理        | 表格   | Goods                           |                                       |
+| 商品分类        | 树    | GoodsCategory                   |                                       |
+| 优惠券管理       | 表格   | Coupon                          |                                       |
 
 **配置项说明**
 > 编码：确保唯一即可，建议是字母
 
-
 ### 常见问题
+
 + 如果图片上传失败请前往 application.yml 修改 erupt.uploadPath 配置
 + 地图组件无法使用请前往 app.js 修改 eruptSiteConfig.amapKey 的值
 + 继承HyperModel的作用，可帮助管理，创建时间，修改时间，修改人，更新人字段
 
 ### 目录说明
+
 ```lua
 erupt-example
 ├── src
