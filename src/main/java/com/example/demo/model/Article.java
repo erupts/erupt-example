@@ -84,12 +84,8 @@ public class Article extends HyperModel {
         this.title = title;
     }
 
-    public Boolean getTop() {
+    public Boolean getTopUp() {
         return topUp;
-    }
-
-    public void setTop(Boolean top) {
-        this.topUp = top;
     }
 
     public Boolean getPublish() {
