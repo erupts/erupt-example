@@ -19,7 +19,8 @@ class ExampleApplicationTests {
     @Test
     public void query() {
         List<Article> articles = eruptDao.lambdaQuery(Article.class)
-                .eq(Article::getTop, false).list();
+                .eq(Article::getTopUp, false).list();
+        System.out.println(articles);
     }
 
 

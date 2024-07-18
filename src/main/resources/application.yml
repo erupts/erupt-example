@@ -12,11 +12,6 @@ erupt:
   uploadPath: D:/erupt/attachment
   # 是否保留上传文件原始名称
   keepUploadFileName: false
-  # 登录session时长（redisSession为true时有效）
-  upms.expireTimeByLogin: 60
-  # 是否记录操作日志，默认true，该功能开启后可在【系统管理 → 操作日志】中查看操作日志
-  security.recordOperateLog: true
-
 
 magic-api:
   web: /magic/web
