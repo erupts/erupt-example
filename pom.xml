@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
 
     <groupId>com.example</groupId>
     <artifactId>erupt-example</artifactId>
