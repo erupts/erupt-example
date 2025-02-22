@@ -19,7 +19,7 @@ public class TestController {
     public List<Article> testArticle() {
         // Erupt jdbc方式查询
         return eruptDao.lambdaQuery(Article.class)
-                .eq(Article::getTop, false)
+                .eq(Article::getTopUp, false)
                 .limit(10).list();
     }
 
