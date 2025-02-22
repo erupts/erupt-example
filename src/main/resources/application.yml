@@ -1,22 +1,23 @@
 erupt-app:
-  # 登录失败几次，需要验证码
-  verifyCodeCount: 2
   # 是否开启水印
   water-mark: false
+  # 登录失败几次，需要验证码
+  verify-code-count: 2
 erupt:
   # 是否开启csrf防御
-  csrfInspect: true
+  csrf-inspect: true
   # 是否开启redis方式存储session，默认false，开启后需在配置文件中添加redis配置（同 spring boot）
-  redisSession: false
+  redis-session: true
   # 附件上传存储路径, 默认路径为：/opt/erupt-attachment
-  uploadPath: D:/erupt/attachment
+  upload-path: D:/erupt/attachment
   # 是否保留上传文件原始名称
-  keepUploadFileName: false
-  # 登录session时长（redisSession为true时有效）
-  upms.expireTimeByLogin: 60
-  # 是否记录操作日志，默认true，该功能开启后可在【系统管理 → 操作日志】中查看操作日志
-  security.recordOperateLog: true
-
+  keep-upload-file-name: false
+  upms:
+    # 登录session时长（redisSession为true时有效）
+    expire-time-by-login: 60
+  security:
+    # 是否记录操作日志，默认true，该功能开启后可在【系统管理 → 操作日志】中查看操作日志
+    record-operate-log: true
 
 magic-api:
   web: /magic/web
@@ -25,6 +26,10 @@ magic-api:
   show-url: false
 
 spring:
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    timeout: 10000
   datasource:
     url: jdbc:mysql://localhost:3306/erupt-example?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
     username: root
@@ -34,8 +39,6 @@ spring:
     generate-ddl: true
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     database: mysql
-  profiles:
-    active: dev
   mail:
     username: xxxx@qq.com
     password: xxxxxxx
