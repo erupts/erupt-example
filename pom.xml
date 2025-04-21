@@ -18,7 +18,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <erupt.version>1.12.19</erupt.version>
+        <erupt.version>1.12.20</erupt.version>
     </properties>
 
 
@@ -44,6 +44,12 @@
         <dependency>
             <groupId>xyz.erupt</groupId>
             <artifactId>erupt-web</artifactId>
+            <version>${erupt.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>xyz.erupt</groupId>
+            <artifactId>erupt-ai</artifactId>
             <version>${erupt.version}</version>
         </dependency>
         <dependency>

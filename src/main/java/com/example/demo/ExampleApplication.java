@@ -2,13 +2,16 @@ package com.example.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 import xyz.erupt.core.annotation.EruptScan;
 
+import javax.persistence.Entity;
 import java.awt.*;
 import java.net.URI;
 
 @SpringBootApplication
 @EruptScan
+@EntityScan
 public class ExampleApplication {
 
     //详细使用方法详见项目内 README.md 文件说明
