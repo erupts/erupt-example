@@ -122,7 +122,7 @@
         <repository>
             <id>nexus-aliyun</id>
             <name>nexus-aliyun</name>
-            <url>http://maven.aliyun.com/nexus/content/repositories/central</url>
+            <url>https://maven.aliyun.com/nexus/content/repositories/central</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
