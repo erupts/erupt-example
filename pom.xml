@@ -18,7 +18,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <erupt.version>1.12.20</erupt.version>
+        <erupt.version>1.12.21</erupt.version>
     </properties>
 
 
@@ -44,17 +44,6 @@
         <dependency>
             <groupId>xyz.erupt</groupId>
             <artifactId>erupt-web</artifactId>
-            <version>${erupt.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>xyz.erupt</groupId>
-            <artifactId>erupt-ai</artifactId>
-            <version>${erupt.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>xyz.erupt</groupId>
-            <artifactId>erupt-websocket</artifactId>
             <version>${erupt.version}</version>
         </dependency>
 
@@ -87,6 +76,18 @@
         <dependency>
             <groupId>xyz.erupt</groupId>
             <artifactId>erupt-magic-api</artifactId>
+            <version>${erupt.version}</version>
+        </dependency>
+        <!--AI能力扩展-->
+        <dependency>
+            <groupId>xyz.erupt</groupId>
+            <artifactId>erupt-ai</artifactId>
+            <version>${erupt.version}</version>
+        </dependency>
+        <!--长连接功能-->
+        <dependency>
+            <groupId>xyz.erupt</groupId>
+            <artifactId>erupt-websocket</artifactId>
             <version>${erupt.version}</version>
         </dependency>
         <!--自定义页面模块-->
