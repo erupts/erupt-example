@@ -31,31 +31,31 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.29</version>
+            <version>8.0.31</version>
         </dependency>
 
         <!--核心管理模块-->
         <dependency>
             <groupId>xyz.erupt</groupId>
             <artifactId>erupt-admin</artifactId>
-            <version>${erupt.version}</version>
+            <version>1.12.21</version>
         </dependency>
         <!--后台WEB界面-->
         <dependency>
             <groupId>xyz.erupt</groupId>
             <artifactId>erupt-web</artifactId>
-            <version>${erupt.version}</version>
+            <version>1.12.21</version>
         </dependency>
 
         <dependency>
             <groupId>xyz.erupt</groupId>
             <artifactId>erupt-ai</artifactId>
-            <version>${erupt.version}</version>
+            <version>1.12.21</version>
         </dependency>
         <dependency>
             <groupId>xyz.erupt</groupId>
             <artifactId>erupt-websocket</artifactId>
-            <version>${erupt.version}</version>
+            <version>1.12.21</version>
         </dependency>
 
         <!-- ****** 以下模块不需要可以去掉 ****** -->
@@ -63,43 +63,43 @@
         <dependency>
             <groupId>xyz.erupt</groupId>
             <artifactId>erupt-cloud-server</artifactId>
-            <version>${erupt.version}</version>
+            <version>1.12.21</version>
         </dependency>
         <!--任务管理模块-->
         <dependency>
             <groupId>xyz.erupt</groupId>
             <artifactId>erupt-job</artifactId>
-            <version>${erupt.version}</version>
+            <version>1.12.21</version>
         </dependency>
         <!--代码生成器模块-->
         <dependency>
             <groupId>xyz.erupt</groupId>
             <artifactId>erupt-generator</artifactId>
-            <version>${erupt.version}</version>
+            <version>1.12.21</version>
         </dependency>
         <!--服务监控模块-->
         <dependency>
             <groupId>xyz.erupt</groupId>
             <artifactId>erupt-monitor</artifactId>
-            <version>${erupt.version}</version>
+            <version>1.12.21</version>
         </dependency>
         <!--在线接口开发-->
         <dependency>
             <groupId>xyz.erupt</groupId>
             <artifactId>erupt-magic-api</artifactId>
-            <version>${erupt.version}</version>
+            <version>1.12.21</version>
         </dependency>
         <!--自定义页面模块-->
         <dependency>
             <groupId>xyz.erupt</groupId>
             <artifactId>erupt-tpl</artifactId>
-            <version>${erupt.version}</version>
+            <version>1.12.21</version>
         </dependency>
         <!--element-ui-->
         <dependency>
             <groupId>xyz.erupt</groupId>
             <artifactId>erupt-tpl-ui.element-ui</artifactId>
-            <version>${erupt.version}</version>
+            <version>1.12.20</version>
         </dependency>
         <!--velocity-->
         <dependency>
