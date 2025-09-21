@@ -10,10 +10,7 @@ import xyz.erupt.annotation.sub_field.ViewType;
 import xyz.erupt.annotation.sub_field.sub_edit.*;
 import xyz.erupt.upms.model.base.HyperModel;
 
-import javax.persistence.Entity;
-import javax.persistence.Lob;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * @author YuePeng
@@ -87,7 +84,7 @@ public class Blog extends HyperModel {
     )
     private String tag;
 
-    @Lob //文章内容较多定义为大文本类型
+    @Column(length = 10_485_760)
     @EruptField(
             views = @View(title = "内容", type = ViewType.HTML),
             edit = @Edit(title = "内容", notNull = true, type = EditType.HTML_EDITOR)

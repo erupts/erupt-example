@@ -137,7 +137,7 @@ public class Complex extends BaseModel implements ChoiceFetchHandler, Readonly.R
     private ComplexExt complexExt;
 
 
-    @Lob
+    @Column(length = 10_485_760)
     @EruptField(
             views = @View(title = "Python代码", type = ViewType.CODE),
             edit = @Edit(title = "Python代码编辑器", type = EditType.CODE_EDITOR, codeEditType = @CodeEditorType(language = "python"))

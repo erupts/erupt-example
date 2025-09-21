@@ -53,7 +53,7 @@ public class Article extends HyperModel {
     )
     private Boolean publish;
 
-    @Lob
+    @Column(length = 10_485_760)
     @EruptField(
             views = @View(title = "内容(UEditor)", type = ViewType.HTML, export = false),
             edit = @Edit(title = "内容(UEditor)", type = EditType.HTML_EDITOR, notNull = true)

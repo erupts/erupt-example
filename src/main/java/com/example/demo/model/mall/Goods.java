@@ -56,7 +56,7 @@ public class Goods extends HyperModel {
     )
     private Boolean status;
 
-    @Lob
+    @Column(length = 10_485_760)
     @EruptField(
             views = @View(title = "商品描述", type = ViewType.HTML),
             edit = @Edit(title = "商品描述", type = EditType.HTML_EDITOR)
