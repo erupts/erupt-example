@@ -13,12 +13,13 @@ import xyz.erupt.annotation.sub_field.sub_edit.Search;
 import xyz.erupt.core.prop.EruptProp;
 import xyz.erupt.upms.model.base.HyperModel;
 
-import javax.annotation.Resource;
+import jakarta.annotation.Resource;
+import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
+
 import javax.imageio.ImageIO;
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
-import javax.persistence.Transient;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileInputStream;

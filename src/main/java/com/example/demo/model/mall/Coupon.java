@@ -11,9 +11,11 @@ import xyz.erupt.annotation.sub_field.sub_edit.ReferenceTreeType;
 import xyz.erupt.annotation.sub_field.sub_edit.Search;
 import xyz.erupt.jpa.model.BaseModel;
 
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+
+import java.time.LocalDateTime;
 import java.util.Date;
 
 /**
@@ -59,13 +61,13 @@ public class Coupon extends BaseModel {
             views = @View(title = "生效时间"),
             edit = @Edit(title = "生效时间", notNull = true, dateType = @DateType(type = DateType.Type.DATE_TIME))
     )
-    private Date startTime;
+    private LocalDateTime startTime;
 
     @EruptField(
             views = @View(title = "失效时间"),
             edit = @Edit(title = "失效时间", notNull = true, dateType = @DateType(type = DateType.Type.DATE_TIME))
     )
-    private Date endTime;
+    private LocalDateTime endTime;
 
     @ManyToOne
     @EruptField(

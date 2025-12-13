@@ -16,7 +16,7 @@ import xyz.erupt.toolkit.handler.SqlChoiceFetchHandler;
 import xyz.erupt.upms.handler.DictCodeChoiceFetchHandler;
 import xyz.erupt.upms.handler.ViaMenuValueCtrl;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;

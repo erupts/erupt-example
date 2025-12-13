@@ -9,8 +9,10 @@ import xyz.erupt.annotation.sub_field.sub_edit.Search;
 import xyz.erupt.annotation.sub_field.sub_edit.SliderType;
 import xyz.erupt.jpa.model.BaseModel;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+import java.time.LocalDate;
 import java.util.Date;
 
 /**
@@ -44,7 +46,7 @@ public class Simple extends BaseModel {
             views = @View(title = "时间"),
             edit = @Edit(title = "时间", search = @Search(vague = true))
     )
-    private Date date;
+    private LocalDate date;
 
     @EruptField(
             views = @View(title = "滑动条"),

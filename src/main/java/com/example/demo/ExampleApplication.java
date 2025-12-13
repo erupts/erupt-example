@@ -5,7 +5,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import xyz.erupt.core.annotation.EruptScan;
 
-import javax.persistence.Entity;
 import java.awt.*;
 import java.net.URI;
 

@@ -26,10 +26,6 @@ magic-api:
   show-url: false
 
 spring:
-  redis:
-    host: 127.0.0.1
-    port: 6379
-    timeout: 10000
   datasource:
     url: jdbc:mysql://localhost:3306/erupt-example?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
     username: root
@@ -37,7 +33,6 @@ spring:
   jpa:
     show-sql: true
     generate-ddl: true
-    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     database: mysql
   mail:
     username: xxxx@qq.com
@@ -51,6 +46,11 @@ spring:
     multipart:
       max-file-size: 100MB
       max-request-size: 100MB
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+      timeout: 10000
 
 server:
   # 启用 gzip 压缩

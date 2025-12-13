@@ -10,7 +10,7 @@ import xyz.erupt.annotation.sub_field.ViewType;
 import xyz.erupt.annotation.sub_field.sub_edit.*;
 import xyz.erupt.upms.model.base.HyperModel;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 /**
  * @author YuePeng

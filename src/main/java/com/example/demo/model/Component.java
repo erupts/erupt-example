@@ -10,10 +10,12 @@ import xyz.erupt.annotation.sub_field.View;
 import xyz.erupt.annotation.sub_field.sub_edit.*;
 import xyz.erupt.jpa.model.BaseModel;
 
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
-import javax.persistence.Transient;
+import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 /**
@@ -101,13 +103,13 @@ public class Component extends BaseModel {
             views = @View(title = "日期"),
             edit = @Edit(title = "日期", type = EditType.DATE, dateType = @DateType(type = DateType.Type.DATE), search = @Search(vague = true))
     )
-    private Date date1;
+    private LocalDate date1;
 
     @EruptField(
             views = @View(title = "时间日期"),
             edit = @Edit(title = "时间日期", type = EditType.DATE, dateType = @DateType(type = DateType.Type.DATE_TIME), search = @Search(vague = true))
     )
-    private Date dateTime;
+    private LocalDateTime dateTime;
 
     @EruptField(
             views = @View(title = "时间"),
