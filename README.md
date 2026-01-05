@@ -1,6 +1,6 @@
 <p align="center"><img src="https://www.erupt.xyz/demo/erupt.svg" height="150" alt="logo"/></p>
-<h1 align="center"> Erupt Framework &nbsp; 🚀 &nbsp; 框架演示代码 </h1>
-<h3 align="center">零前端代码，几行 Java 注解，搞定后台管理系统</h3>
+<h1 align="center"> Erupt Engine &nbsp; 🚀 &nbsp; Example </h1>
+<h3 align="center">零前端代码，几行 Java 注解，实现通用数据平台</h3>
 <h3 align="center"><a href="https://erupt.xyz" target="_blank">https://www.erupt.xyz</a></h3>
 
 ---
@@ -31,7 +31,7 @@
 
 ### 使用方法：
 
-1. 前往 src/main/resources/application.yml 修改数据库连接配置(可选，默认h2数据库)
+1. 前往 src/main/resources/application.yml 修改数据库连接配置(可选，默认h2数据库，可修改为 Mysql, Postgres, Oracle 等)
 2. 前往 src/main/java/DemoApplication 运行 main 方法即可（无需sql文件，表结构自动创建）
 3. 访问 http://localhost:8080 即可查看效果
 4. 用户名 / 密码： erupt / erupt
@@ -65,9 +65,6 @@
 | 商品管理        | 表格   | Goods                           |                                       |
 | 商品分类        | 树    | GoodsCategory                   |                                       |
 | 优惠券管理       | 表格   | Coupon                          |                                       |
-
-**配置项说明**
-> 编码：确保唯一即可，建议是字母
 
 ### 常见问题
 
