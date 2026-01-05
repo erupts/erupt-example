@@ -17,7 +17,7 @@ public class TestController {
     //获取文章列表
     @RequestMapping("/list")
     public List<Article> testArticle() {
-        // Erupt jdbc方式查询
+        // Erupt JDBC 查询
         return eruptDao.lambdaQuery(Article.class)
                 .eq(Article::getTopUp, false)
                 .limit(10).list();

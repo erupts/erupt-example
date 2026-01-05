@@ -31,15 +31,14 @@
 
 ### 使用方法：
 
-1. 前往 src/main/resources/application.yml 修改数据库连接配置
-2. 前往 src/main/java/DemoApplication 运行main方法即可（无需sql文件，表结构自动创建）
-3. src/main/resources/application.yml 其他配置
-
-默认用户名密码： erupt / erupt
+1. 前往 src/main/resources/application.yml 修改数据库连接配置(可选，默认h2数据库)
+2. 前往 src/main/java/DemoApplication 运行 main 方法即可（无需sql文件，表结构自动创建）
+3. 访问 http://localhost:8080 即可查看效果
+4. 用户名 / 密码： erupt / erupt
 
 ### 将model下的类添加到菜单：
 
-启动成功后，前往系统管理 → 菜单维护 → 新增，将已定义好的演示类添加到菜单中，填写数据如下：
+启动成功后，前往系统管理 → 菜单维护 → 新增，将已定义好的演示类添加到菜单中即可看到不同的菜单能力，填写数据如下：
 
 | 菜单名称        | 菜单类型 | 类型值（类名）                         | 描述                                    |
 |-------------|------|---------------------------------|---------------------------------------|

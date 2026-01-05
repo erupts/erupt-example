@@ -18,7 +18,7 @@
 
     <properties>
         <java.version>17</java.version>
-        <erupt.version>1.13.1</erupt.version>
+        <erupt.version>1.13.2</erupt.version>
     </properties>
 
 
@@ -32,6 +32,10 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.29</version>
+        </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
         </dependency>
 
         <!--核心管理模块-->
@@ -82,6 +86,12 @@
         <dependency>
             <groupId>xyz.erupt</groupId>
             <artifactId>erupt-ai</artifactId>
+            <version>${erupt.version}</version>
+        </dependency>
+        <!--通知模块-->
+        <dependency>
+            <groupId>xyz.erupt</groupId>
+            <artifactId>erupt-notice</artifactId>
             <version>${erupt.version}</version>
         </dependency>
         <!--长连接功能-->
