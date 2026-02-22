@@ -27,13 +27,23 @@ magic-api:
 
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/erupt-example?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
-    username: root
-    password: 12345678
+    url: jdbc:h2:file:./erupt;AUTO_SERVER=TRUE;MODE=MySQL;CASE_INSENSITIVE_IDENTIFIERS=TRUE
+    driver-class-name: org.h2.Driver
   jpa:
-    show-sql: true
     generate-ddl: true
-    database: mysql
+    database: h2
+    properties:
+      hibernate:
+        globally_quoted_identifiers: true
+        type.enumeration.use_named: false
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/erupt-example?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+#    username: root
+#    password: 12345678
+#  jpa:
+#    show-sql: true
+#    generate-ddl: true
+#    database: mysql
   mail:
     username: xxxx@qq.com
     password: xxxxxxx

@@ -1,6 +1,6 @@
 <p align="center"><img src="https://www.erupt.xyz/demo/erupt.svg" height="150" alt="logo"/></p>
-<h1 align="center"> Erupt Framework &nbsp; 🚀 &nbsp; 框架演示代码 </h1>
-<h3 align="center">零前端代码，几行 Java 注解，搞定后台管理系统</h3>
+<h1 align="center"> Erupt Engine &nbsp; 🚀 &nbsp; Example </h1>
+<h3 align="center">零前端代码，几行 Java 注解，实现通用数据平台</h3>
 <h3 align="center"><a href="https://erupt.xyz" target="_blank">https://www.erupt.xyz</a></h3>
 
 ---
@@ -31,15 +31,14 @@
 
 ### 使用方法：
 
-1. 前往 src/main/resources/application.yml 修改数据库连接配置
-2. 前往 src/main/java/DemoApplication 运行main方法即可（无需sql文件，表结构自动创建）
-3. src/main/resources/application.yml 其他配置
+1. 前往 src/main/resources/application.yml 修改数据库连接配置(可选，默认h2数据库，可修改为 Mysql, Postgres, Oracle 等)
+2. 前往 src/main/java/DemoApplication 运行 main 方法即可（无需sql文件，表结构自动创建）
+3. 访问 http://localhost:8080 即可查看效果
+4. 用户名 / 密码： erupt / erupt
 
-默认用户名密码： erupt / erupt
+### 功能体验：
 
-### 将model下的类添加到菜单：
-
-启动成功后，前往系统管理 → 菜单维护 → 新增，将已定义好的演示类添加到菜单中，填写数据如下：
+系统启动成功后，进入【系统管理 → 菜单维护】，点击【新增】，将已定义好的演示类配置到菜单中。配置完成后，即可直观体验不同类型菜单所支持的功能。相关字段请按如下示例填写：
 
 | 菜单名称        | 菜单类型 | 类型值（类名）                         | 描述                                    |
 |-------------|------|---------------------------------|---------------------------------------|
@@ -66,9 +65,6 @@
 | 商品管理        | 表格   | Goods                           |                                       |
 | 商品分类        | 树    | GoodsCategory                   |                                       |
 | 优惠券管理       | 表格   | Coupon                          |                                       |
-
-**配置项说明**
-> 编码：确保唯一即可，建议是字母
 
 ### 常见问题
 
