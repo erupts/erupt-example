@@ -4,10 +4,6 @@ erupt-app:
   # 登录失败几次，需要验证码
   verify-code-count: 2
 erupt:
-  # 是否开启csrf防御
-  csrf-inspect: true
-  # 是否开启redis方式存储session，默认false，开启后需在配置文件中添加redis配置（同 spring boot）
-  redis-session: true
   # 附件上传存储路径, 默认路径为：/opt/erupt-attachment
   upload-path: D:/erupt/attachment
   # 是否保留上传文件原始名称
@@ -15,9 +11,7 @@ erupt:
   upms:
     # 登录session时长（redisSession为true时有效）
     expire-time-by-login: 60
-  security:
-    # 是否记录操作日志，默认true，该功能开启后可在【系统管理 → 操作日志】中查看操作日志
-    record-operate-log: true
+  default-locales: zh-CN
 
 magic-api:
   web: /magic/web
@@ -44,14 +38,6 @@ spring:
 #    show-sql: true
 #    generate-ddl: true
 #    database: mysql
-  mail:
-    username: xxxx@qq.com
-    password: xxxxxxx
-    host: smtp.qq.com
-    properties:
-      mail.smtp.ssl.auth: true
-      mail.smtp.ssl.enable: true
-      mail.smtp.ssl.required: true
   servlet:
     multipart:
       max-file-size: 100MB
