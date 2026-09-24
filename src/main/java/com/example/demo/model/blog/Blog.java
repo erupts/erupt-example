@@ -35,13 +35,13 @@ public class Blog extends HyperModel {
 
     @EruptField(
             views = @View(title = "标题"),
-            edit = @Edit(title = "标题", notNull = true, search = @Search(vague = true), inputType = @InputType(fullSpan = true))
+            edit = @Edit(title = "标题", notNull = true, search = @Search, inputType = @InputType(fullSpan = true))
     )
     private String name;
 
 //    @EruptField(
 //            views = @View(title = "简介", type = ViewType.HTML),
-//            edit = @Edit(title = "简介", notNull = true, search = @Search(vague = true), inputType = @InputType(fullSpan = true))
+//            edit = @Edit(title = "简介", notNull = true, search = @Search, inputType = @InputType(fullSpan = true))
 //    )
 //    private String intro;
 

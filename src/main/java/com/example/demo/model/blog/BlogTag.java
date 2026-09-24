@@ -26,7 +26,7 @@ public class BlogTag extends HyperModel {
 
     @EruptField(
             views = @View(title = "标签名称"),
-            edit = @Edit(title = "标签名称", notNull = true, search = @Search(vague = true), inputType = @InputType(fullSpan = true))
+            edit = @Edit(title = "标签名称", notNull = true, search = @Search, inputType = @InputType(fullSpan = true))
     )
     private String name;
 

@@ -27,7 +27,7 @@ public class Goods extends HyperModel {
 
     @EruptField(
             views = @View(title = "商品名称"),
-            edit = @Edit(title = "商品名称", notNull = true, inputType = @InputType(fullSpan = true), search = @Search(vague = true))
+            edit = @Edit(title = "商品名称", notNull = true, inputType = @InputType(fullSpan = true), search = @Search)
     )
     private String name;
 
@@ -46,7 +46,7 @@ public class Goods extends HyperModel {
 
     @EruptField(
             views = @View(title = "运费"),
-            edit = @Edit(title = "运费", notNull = true, search = @Search(vague = true))
+            edit = @Edit(title = "运费", notNull = true, search = @Search)
     )
     private final Double freight = 0D;
 

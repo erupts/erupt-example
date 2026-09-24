@@ -25,7 +25,7 @@ public class BlogCategory extends BaseModel {
 
     @EruptField(
             views = @View(title = "名称"),
-            edit = @Edit(title = "名称", notNull = true, search = @Search(vague = true))
+            edit = @Edit(title = "名称", notNull = true, search = @Search)
     )
     private String name;
 

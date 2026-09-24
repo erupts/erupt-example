@@ -32,13 +32,13 @@ public class Component extends BaseModel {
 
     @EruptField(
             views = @View(title = "文本"),
-            edit = @Edit(title = "文本", search = @Search(vague = true))
+            edit = @Edit(title = "文本", search = @Search)
     )
     private String input;
 
     @EruptField(
             views = @View(title = "数字"),
-            edit = @Edit(title = "数字", search = @Search(vague = true))
+            edit = @Edit(title = "数字", search = @Search)
     )
     private Double number1;
 
@@ -56,20 +56,20 @@ public class Component extends BaseModel {
 
     @EruptField(
             views = @View(title = "自动完成"),
-            edit = @Edit(title = "自动完成", search = @Search(vague = true), type = EditType.AUTO_COMPLETE,
+            edit = @Edit(title = "自动完成", search = @Search, type = EditType.AUTO_COMPLETE,
                     autoCompleteType = @AutoCompleteType(handler = AutoCompleteHandlerImpl.class))
     )
     private String autoComplete;
 
     @EruptField(
             views = @View(title = "颜色选择"),
-            edit = @Edit(title = "颜色选择", search = @Search(vague = true), inputType = @InputType(type = "color"))
+            edit = @Edit(title = "颜色选择", search = @Search, inputType = @InputType(type = "color"))
     )
     private String color;
 
     @EruptField(
             views = @View(title = "周选择器"),
-            edit = @Edit(title = "周选择器", search = @Search(vague = true), inputType = @InputType(type = "week"))
+            edit = @Edit(title = "周选择器", search = @Search, inputType = @InputType(type = "week"))
     )
     private String weekInput;
 
@@ -101,13 +101,13 @@ public class Component extends BaseModel {
 
     @EruptField(
             views = @View(title = "日期"),
-            edit = @Edit(title = "日期", type = EditType.DATE, dateType = @DateType(type = DateType.Type.DATE), search = @Search(vague = true))
+            edit = @Edit(title = "日期", type = EditType.DATE, dateType = @DateType(type = DateType.Type.DATE), search = @Search)
     )
     private LocalDate date1;
 
     @EruptField(
             views = @View(title = "时间日期"),
-            edit = @Edit(title = "时间日期", type = EditType.DATE, dateType = @DateType(type = DateType.Type.DATE_TIME), search = @Search(vague = true))
+            edit = @Edit(title = "时间日期", type = EditType.DATE, dateType = @DateType(type = DateType.Type.DATE_TIME), search = @Search)
     )
     private LocalDateTime dateTime;
 

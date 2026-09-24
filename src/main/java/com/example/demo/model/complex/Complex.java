@@ -88,7 +88,6 @@ public class Complex extends BaseModel implements ChoiceFetchHandler, Readonly.R
                     search = @Search,
                     title = "SQL选择", type = EditType.CHOICE, desc = "下拉值为动态获取",
                     choiceType = @ChoiceType(
-                            anewFetch = true,
                             fetchHandler = SqlChoiceFetchHandler.class,
 //                            dependField = "bool",
 //                            dependExpr = "dependValue == vl.value",
@@ -119,10 +118,9 @@ public class Complex extends BaseModel implements ChoiceFetchHandler, Readonly.R
     @EruptField(
             views = @View(title = "RADIO"),
             edit = @Edit(
-                    search = @Search(vague = true),
+                    search = @Search,
                     title = "RADIO", type = EditType.CHOICE, desc = "值为动态获取",
                     choiceType = @ChoiceType(
-                            anewFetch = true,
                             type = ChoiceType.Type.RADIO,
                             fetchHandler = Complex.class
                     ))
