@@ -44,7 +44,7 @@ public class Simple extends BaseModel {
 
     @EruptField(
             views = @View(title = "时间"),
-            edit = @Edit(title = "时间", search = @Search(vague = true))
+            edit = @Edit(title = "时间", search = @Search)
     )
     private LocalDate date;
 

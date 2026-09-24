@@ -37,7 +37,7 @@ public class Article extends HyperModel {
 
     @EruptField(
             views = @View(title = "标题"),
-            edit = @Edit(title = "标题", notNull = true, search = @Search(vague = true))
+            edit = @Edit(title = "标题", notNull = true, search = @Search)
     )
     private String title;
 

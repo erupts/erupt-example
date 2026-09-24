@@ -47,7 +47,7 @@ public class Coupon extends BaseModel {
 
     @EruptField(
             views = @View(title = "发行量"),
-            edit = @Edit(title = "发行量", notNull = true, search = @Search(vague = true))
+            edit = @Edit(title = "发行量", notNull = true, search = @Search)
     )
     private Integer maxCount;
 

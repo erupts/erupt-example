@@ -54,13 +54,13 @@ public class Pictures extends HyperModel implements DataProxy<Pictures> {
 
     @EruptField(
             views = @View(title = "宽度"),
-            edit = @Edit(title = "宽度", show = false, search = @Search(vague = true))
+            edit = @Edit(title = "宽度", show = false, search = @Search)
     )
     private Integer width;
 
     @EruptField(
             views = @View(title = "高度"),
-            edit = @Edit(title = "高度", show = false, search = @Search(vague = true))
+            edit = @Edit(title = "高度", show = false, search = @Search)
     )
     private Integer height;
 

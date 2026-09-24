@@ -15,13 +15,13 @@ import java.util.Map;
  * date 2020/12/15 13:47
  */
 @Component
-public class BlogTagHandler implements TagsFetchHandler {
+public class BlogTagHandler implements TagsFetchHandler<Object> {
 
     @Resource
     private EruptDao eruptDao;
 
     @Override
-    public List<String> fetchTags(String[] params) {
+    public List<String> fetchTags(Object model, String[] params) {
         return eruptDao.lambdaQuery(BlogTag.class).listSelect(BlogTag::getName);
     }
 }
