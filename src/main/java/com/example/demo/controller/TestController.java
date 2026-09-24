@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import xyz.erupt.jpa.dao.EruptDao;
 
-import javax.annotation.Resource;
+import jakarta.annotation.Resource;
 import java.util.List;
 
 @RestController
@@ -17,7 +17,7 @@ public class TestController {
     //获取文章列表
     @RequestMapping("/list")
     public List<Article> testArticle() {
-        // Erupt jdbc方式查询
+        // Erupt JDBC 查询
         return eruptDao.lambdaQuery(Article.class)
                 .eq(Article::getTopUp, false)
                 .limit(10).list();

@@ -12,7 +12,7 @@ import java.util.Map;
  * @date 2020-08-14
  */
 @Component // 可以使用依赖注入等操作
-public class AutoCompleteHandlerImpl implements AutoCompleteHandler {
+public class AutoCompleteHandlerImpl implements AutoCompleteHandler<Map<String, Object>> {
 
     @Override
     public List<Object> completeHandler(Map<String, Object> formData, String val, String[] param) {

@@ -10,7 +10,7 @@ import xyz.erupt.annotation.sub_field.ViewType;
 import xyz.erupt.annotation.sub_field.sub_edit.*;
 import xyz.erupt.upms.model.base.HyperModel;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.Set;
 
 @Erupt(name = "商品管理", linkTree = @LinkTree(field = "category"))
@@ -27,7 +27,7 @@ public class Goods extends HyperModel {
 
     @EruptField(
             views = @View(title = "商品名称"),
-            edit = @Edit(title = "商品名称", notNull = true, inputType = @InputType(fullSpan = true), search = @Search(vague = true))
+            edit = @Edit(title = "商品名称", notNull = true, inputType = @InputType(fullSpan = true), search = @Search)
     )
     private String name;
 
@@ -46,7 +46,7 @@ public class Goods extends HyperModel {
 
     @EruptField(
             views = @View(title = "运费"),
-            edit = @Edit(title = "运费", notNull = true, search = @Search(vague = true))
+            edit = @Edit(title = "运费", notNull = true, search = @Search)
     )
     private final Double freight = 0D;
 
@@ -56,7 +56,7 @@ public class Goods extends HyperModel {
     )
     private Boolean status;
 
-    @Lob
+    @Column(length = 10_485_760)
     @EruptField(
             views = @View(title = "商品描述", type = ViewType.HTML),
             edit = @Edit(title = "商品描述", type = EditType.HTML_EDITOR)

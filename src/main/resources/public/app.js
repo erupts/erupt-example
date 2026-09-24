@@ -14,5 +14,8 @@ window.eruptSiteConfig = {
     logoPath: "erupt.svg",
     //logo文字
     logoText: "erupt",
-    copyright: false
+    copyright: false,
+    theme:{
+        primaryColor: '#4CAF50'
+    }
 };

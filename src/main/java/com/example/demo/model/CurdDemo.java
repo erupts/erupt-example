@@ -9,8 +9,8 @@ import xyz.erupt.annotation.sub_field.sub_edit.Search;
 import xyz.erupt.core.exception.EruptApiErrorTip;
 import xyz.erupt.jpa.model.BaseModel;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 import java.util.Collection;
 import java.util.Map;
 
@@ -31,7 +31,7 @@ public class CurdDemo extends BaseModel implements DataProxy<CurdDemo> {
 
     @EruptField(
             views = @View(title = "名称"),
-            edit = @Edit(title = "名称", notNull = true, search = @Search(vague = true))
+            edit = @Edit(title = "名称", notNull = true, search = @Search)
     )
     private String name;
 

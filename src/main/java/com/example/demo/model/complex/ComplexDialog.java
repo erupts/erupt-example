@@ -6,6 +6,7 @@ import xyz.erupt.annotation.fun.DataProxy;
 import xyz.erupt.annotation.sub_field.Edit;
 import xyz.erupt.jpa.model.BaseModel;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 
@@ -20,7 +21,7 @@ public class ComplexDialog extends BaseModel {
     @EruptField(
             edit = @Edit(title = "时间", notNull = true)
     )
-    private Date date;
+    private LocalDateTime date;
 
     @EruptField(
             edit = @Edit(title = "数值", notNull = true)
@@ -35,12 +36,8 @@ public class ComplexDialog extends BaseModel {
         this.text = text;
     }
 
-    public Date getDate() {
+    public LocalDateTime getDate() {
         return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
     }
 
     public Long getNumber() {

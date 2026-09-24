@@ -12,10 +12,10 @@ import xyz.erupt.annotation.sub_field.sub_edit.BoolType;
 import xyz.erupt.annotation.sub_field.sub_edit.Search;
 import xyz.erupt.upms.model.base.HyperModel;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Lob;
-import javax.persistence.Table;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Lob;
+import jakarta.persistence.Table;
 
 /**
  * Created by liyuepeng on 2019-09-18.
@@ -37,7 +37,7 @@ public class Article extends HyperModel {
 
     @EruptField(
             views = @View(title = "标题"),
-            edit = @Edit(title = "标题", notNull = true, search = @Search(vague = true))
+            edit = @Edit(title = "标题", notNull = true, search = @Search)
     )
     private String title;
 
@@ -53,7 +53,7 @@ public class Article extends HyperModel {
     )
     private Boolean publish;
 
-    @Lob
+    @Column(length = 10_485_760)
     @EruptField(
             views = @View(title = "内容(UEditor)", type = ViewType.HTML, export = false),
             edit = @Edit(title = "内容(UEditor)", type = EditType.HTML_EDITOR, notNull = true)

@@ -16,7 +16,7 @@ import xyz.erupt.toolkit.handler.SqlChoiceFetchHandler;
 import xyz.erupt.upms.handler.DictCodeChoiceFetchHandler;
 import xyz.erupt.upms.handler.ViaMenuValueCtrl;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -88,7 +88,6 @@ public class Complex extends BaseModel implements ChoiceFetchHandler, Readonly.R
                     search = @Search,
                     title = "SQL选择", type = EditType.CHOICE, desc = "下拉值为动态获取",
                     choiceType = @ChoiceType(
-                            anewFetch = true,
                             fetchHandler = SqlChoiceFetchHandler.class,
 //                            dependField = "bool",
 //                            dependExpr = "dependValue == vl.value",
@@ -119,10 +118,9 @@ public class Complex extends BaseModel implements ChoiceFetchHandler, Readonly.R
     @EruptField(
             views = @View(title = "RADIO"),
             edit = @Edit(
-                    search = @Search(vague = true),
+                    search = @Search,
                     title = "RADIO", type = EditType.CHOICE, desc = "值为动态获取",
                     choiceType = @ChoiceType(
-                            anewFetch = true,
                             type = ChoiceType.Type.RADIO,
                             fetchHandler = Complex.class
                     ))
@@ -137,7 +135,7 @@ public class Complex extends BaseModel implements ChoiceFetchHandler, Readonly.R
     private ComplexExt complexExt;
 
 
-    @Lob
+    @Column(length = 10_485_760)
     @EruptField(
             views = @View(title = "Python代码", type = ViewType.CODE),
             edit = @Edit(title = "Python代码编辑器", type = EditType.CODE_EDITOR, codeEditType = @CodeEditorType(language = "python"))
